@@ -1,0 +1,60 @@
+// sass变量
+$primary-color: #F15B5A;  // 主色
+$blue-color: #3A72EF;     // 蓝色
+$yellow-color: #FAC424;   // 黄色
+$title-color: #2D2F46;    // 标题色
+$content-color: #81849F;  // 正文字色
+$remark-color: #B2B4C6;   // 备注色
+$border-color: #EBEBEB;   // 描边色
+$bg-color: #F7F6F8;       // 背景色
+$assist-color: #FCFCFC;   // 模块辅助色
+
+
+/**
+ * 路由切换，动画过度
+ */
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+// 解决 iPhone6 高清1px方案问题
+@mixin border($width, $style, $color, $align) {
+  @if $align=='' {
+    border: $width $style $color;
+    @media screen and (width: 375px) {
+      border: $width/2 $style $color;
+    }
+  }
+  @else {
+    border-#{$align}: $width $style $color;
+    @media screen and (width: 375px) {
+      border-#{$align}: $width/2 $style $color;
+    }
+  }
+}
+
+/*点点点*/
+
+.dotting {
+  display: inline-block; min-width: 3px; min-height: 3px;
+  box-shadow: 4px 0 currentColor, 14px 0 currentColor, 24px 0 currentColor;
+  -webkit-animation: dot 4s infinite step-start both;
+  animation: dot 4s infinite step-start both;
+}
+.dotting:before { content: '...'; } /* IE8 */
+.dotting::before { content: ''; }
+:root .dotting { margin-right: 8px; } /* IE9+,FF,CH,OP,SF */
+
+@-webkit-keyframes dot {
+  25% { box-shadow: none; }
+  50% { box-shadow: 4px 0 currentColor; }
+  75% { box-shadow: 4px 0 currentColor, 14px 0 currentColor; }
+}
+@keyframes dot {
+  25% { box-shadow: none; }
+  50% { box-shadow: 4px 0 currentColor; }
+  75% { box-shadow: 4px 0 currentColor, 14px 0 currentColor; }
+}
