@@ -1,15 +1,9 @@
-$blue : blue;
+@import '../../wxss/style';
 
 .textColor{
-    top: 1px;
-    left: 22222px;
-    color: $blue;
-    text-align: center;
-    font-family: Arial;
-    text-indent: 220em;
-
+    color: $color;
+    background: $background;
     font-size: 30px;
-    font-style: italic;
     .app{
         float:left;
         display: flex;
