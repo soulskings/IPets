@@ -1,1 +1,16 @@
-/* pages/home/home.wxss */
+.textColor {
+  top: 1px;
+  left: 22222px;
+  color: blue;
+  text-align: center;
+  font-family: Arial;
+  text-indent: 220em;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.textColor .app {
+  float: left;
+  display: flex;
+  color: #fff;
+}

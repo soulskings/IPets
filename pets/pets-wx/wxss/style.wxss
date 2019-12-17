@@ -1,0 +1,4 @@
+.sty {
+  text-indent: 3em;
+  font-size: 40px;
+}
