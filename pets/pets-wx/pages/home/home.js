@@ -1,4 +1,6 @@
 // pages/home/home.js
+import { requestPost } from '../../utils/request'
+import { replaceToken } from '../../utils/requesUrl'
 Page({
 
     /**
@@ -19,7 +21,14 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
+        console.log(wx.env)
+        requestPost(replaceToken,{code:1})
+        .then((res) => {
+            if (1) {}
+        })
+        .catch(() => {
 
+        })
     },
 
     /**

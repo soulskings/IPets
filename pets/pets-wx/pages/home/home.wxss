@@ -1,7 +1,7 @@
 .textColor {
   color: #333;
   background: blue;
-  font-size: 30px;
+  font-size: 28rpx;
 }
 
 .textColor .app {
