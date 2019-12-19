@@ -48,7 +48,6 @@ const Koa = require('koa')
 const logger = require('koa-logger')
 const session = require('koa-session')
 const cors = require('koa2-cors')
-const bodyParser = require('koa-bodyparser')
 var body = require('koa-body')
 
 const controller = require('./controller')
@@ -58,7 +57,6 @@ const app = new Koa()
 app.use(logger())
 app.use(cors())
 app.use(session(app))
-app.use(bodyParser())
 
 // log request URL:
 app.use(async (ctx, next) => {
