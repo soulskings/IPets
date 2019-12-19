@@ -1,0 +1,18 @@
+.classification {
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.classification > view {
+  flex: 1;
+}
+
+.classification > view image {
+  width: 350rpx;
+}
+
+.classification > view .classification-name {
+  display: block;
+  text-align: center;
+}

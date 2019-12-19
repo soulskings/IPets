@@ -1,0 +1,15 @@
+.classification{
+    padding: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    >view{
+        image{
+            width: 350rpx;
+        }
+        flex: 1;
+        .classification-name{
+            display: block;
+            text-align: center;
+        }
+    }
+}

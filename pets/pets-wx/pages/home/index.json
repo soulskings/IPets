@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "classification": "/pages/home/components/classification/index"
+  }
+}
