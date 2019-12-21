@@ -1,22 +1,16 @@
-const CircularJSON = require('circular-json')
+const CustomError = require('../../utils/error-class.js')
 const replaceTokenController = async (ctx, next) => {
   let body
-  if (+ctx.request.body.code !== 1) {
-    body = await CircularJSON.stringify({
-        code: '999999',
-        data: {
-          token: null,
-        },
-        message: '网络异常'
-    })
+  if (!ctx.request.body.code) {
+    throw new CustomError()
   } else {
-    body = await CircularJSON.stringify({
-        code: '000001',
+    body = await {
+        code: '000000',
         data: {
           token: '111111111',
         },
         message: '成功'
-    }) 
+    }
   }
   ctx.body = body
 }

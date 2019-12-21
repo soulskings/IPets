@@ -54,6 +54,12 @@ const controller = require('./controller')
 
 const app = new Koa()
 
+
+/**
+ * 自定义中间件
+ */
+const error = require('./middleware/error-middlerware')
+
 app.use(logger())
 app.use(cors())
 app.use(session(app))
@@ -66,6 +72,8 @@ app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url} ...`)
 });
 
+// 同意处理业务错误
+app.use(error)
 
 // parse request body:
 app.use(body())
