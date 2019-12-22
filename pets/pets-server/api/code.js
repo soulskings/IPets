@@ -6,6 +6,10 @@ const resCode = {
   ERROR: '999999' // 业务异常码
 }
 
+const message = {
+  SUCCESS: '成功' // 成功
+}
+
 const template = {
   // 网络异常
   netError: {
@@ -22,5 +26,6 @@ const template = {
 
 module.exports = {
   resCode,
+  message,
   template
 }

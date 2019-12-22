@@ -5,14 +5,19 @@ const fs = require('fs')
 const path = require('path')
 const mongoose = require('mongoose')
 
-const db = 'mongodb://192.168.8.196:27017/user'
+const UsrUri = 'mongodb://192.168.8.196:27017/user'
+const petsUri = 'mongodb://192.168.8.196:27017/pets'
+const UsrDb = mongoose.createConnection(UsrUri)
+const petsDb = mongoose.createConnection(petsUri)
+global.UsrDb = UsrDb // 用户库
+global.petsDb = petsDb // 宠物库
 
 /**
  * mongoose连接数据库
  * @type {[type]}
  */
 mongoose.Promise = require('bluebird')
-mongoose.connect(db)
+// mongoose.connect()
 
 /**
  * 获取数据库表对应的js对象所在的路径
