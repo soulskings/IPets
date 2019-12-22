@@ -12,6 +12,11 @@ const template = {
     code: resCode.ERROR,
     data: null,
     message: '网络异常'
+  },
+  paramsError: {
+    code: resCode.ERROR_PARAMS,
+    data: null,
+    message: '请求参数异常'
   }
 }
 
