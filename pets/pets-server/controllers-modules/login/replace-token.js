@@ -2,10 +2,13 @@ const CustomError = require('../../utils/error-class.js')
 const { template, resCode, message } = require('../../api/code')
 const { fetchGet } = require('../../utils/request')
 const { wxApi, appid, secret } = require('../../api/wx-api')
+const saveToken = require('../../dbheleper/login/replace-token')
+const jwt = require('jsonwebtoken')
 
 const replaceTokenController = async (ctx, next) => {
   let body
   const code = ctx.request.body.code
+
   if (!code) {
     throw new CustomError(template.paramsError)
   } else {
@@ -25,8 +28,23 @@ const replaceTokenController = async (ctx, next) => {
         message: res.errmsg
       })
     }
+
+    // 校验成功并生成token
+    const user = {
+      openid: res.openid,
+      session_key: res.session_key,
+      time: new Date()
+    }
+
+    const preToken = jwt.sign(user, 'shhhhh')
+    const Token = preToken.split('.')[1]
     
-    // 校验成功并关联库中用户数据
+    // 保存用户token
+    saveToken({
+      user,
+      Token
+    })
+
     body = {
         code: resCode.SUCCESS,
         data: {
