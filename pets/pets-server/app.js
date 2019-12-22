@@ -11,6 +11,7 @@ const UsrDb = mongoose.createConnection(UsrUri)
 const petsDb = mongoose.createConnection(petsUri)
 global.UsrDb = UsrDb // 用户库
 global.petsDb = petsDb // 宠物库
+global.Schema = mongoose.Schema
 
 /**
  * mongoose连接数据库
