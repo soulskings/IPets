@@ -4,6 +4,7 @@ const errorController = async (ctx, next) => {
   try {
     await next()
   } catch (err) {
+    console.log(err, '代码错误')
     if (!err) err = {
       errorObj: template.netError
     }

@@ -2,9 +2,17 @@
 const cateDb = require('../../models/pets/cate')
 const findCate = () => {
   return new Promise((resolve, reject) => {
-    cateDb.find({_id:0 }).lean().exec(function (err, res) {
+    cateDb.find().lean().exec(function (err, res) {
+      const list = []
       if (err) reject()
-      resolve(res)
+      res.forEach((item) => {
+        list.push({
+          cid: item.cid,
+          name: item.name,
+          img: item.img
+        })
+      })
+      resolve(list)
     })
   })
 }
