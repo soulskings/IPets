@@ -56,7 +56,7 @@ const session = require('koa-session')
 const cors = require('koa2-cors')
 var body = require('koa-body')
 
-const controller = require('./controller')
+const router = require('./router')
 
 const app = new Koa()
 
@@ -85,7 +85,7 @@ app.use(error)
 app.use(body())
 
 // add controllers:
-app.use(controller())
+app.use(router())
 
 app.listen(3001)
 console.log('app started at port 3001...')

@@ -40,22 +40,20 @@ const replaceTokenController = async (ctx, next) => {
     const Token = preToken.split('.')[1]
     
     // 保存用户token
-    saveToken({
+    await saveToken({
       user,
       Token
     })
 
     body = {
-        code: resCode.SUCCESS,
-        data: {
-          token: Token,
-        },
-        message: message.SUCCESS
+      code: resCode.SUCCESS,
+      data: {
+        token: Token,
+      },
+      message: message.SUCCESS
     }
   }
   ctx.body = body
 }
 
-module.exports = {
-  replaceTokenController: replaceTokenController
-}
+module.exports = replaceTokenController
