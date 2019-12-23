@@ -48,7 +48,7 @@ const replaceTokenController = async (ctx, next) => {
     body = {
         code: resCode.SUCCESS,
         data: {
-          token: '111111111',
+          token: Token,
         },
         message: message.SUCCESS
     }
