@@ -1,5 +1,5 @@
 const resCode = {
-  SUCCESS: '000000', // 业务成功
+  SUCCESS: '1000', // 业务成功
   NO_LOGIN: '000001', // 未登录
   LOGIN_FAILURE: '000002', // 登录失效
   ERROR_PARAMS: '000010', // 请求参数错误

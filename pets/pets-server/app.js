@@ -1,5 +1,6 @@
 require('babel-core/register')
 require('babel-polyfill')
+require('module-alias/register')
 
 const fs = require('fs')
 const path = require('path')
@@ -8,9 +9,9 @@ const mongoose = require('mongoose')
 const UsrUri = 'mongodb://192.168.8.196:27017/user'
 const petsUri = 'mongodb://192.168.8.196:27017/pets'
 const UsrDb = mongoose.createConnection(UsrUri)
-const petsDb = mongoose.createConnection(petsUri)
+const PetsDb = mongoose.createConnection(petsUri)
 global.UsrDb = UsrDb // 用户库
-global.petsDb = petsDb // 宠物库
+global.PetsDb = PetsDb // 宠物库
 global.Schema = mongoose.Schema
 
 /**
@@ -87,5 +88,5 @@ app.use(body())
 // add controllers:
 app.use(router())
 
-app.listen(3001)
-console.log('app started at port 3001...')
+app.listen(8080)
+console.log('app started at port 8080...')
