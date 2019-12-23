@@ -17,7 +17,6 @@ const petListController = async (ctx, next) => {
             message: 'cid is required'
         })
     }
-    console.log(ctx.request.body)
 
     let data, total;
     await new Promise(resolve => {
