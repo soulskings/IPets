@@ -5,7 +5,7 @@ const saveToken = ({ user, Token }) => {
   return new Promise((resolve, reject) => {
     tokenDb.find({ openid: user.openid }).exec((err, res) => {
       const query = { openid: user.openid }
-      if (err) throw new CustomError()
+      if (err) reject()
       if (res.length > 0) {
         // 如果用户存在则更新token
         new tokenDb().findOneAndUpdate(query, { token: Token, time: user.time })
