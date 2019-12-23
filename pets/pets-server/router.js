@@ -28,7 +28,7 @@ function addMapping(router, mapping) {
     }
 }
 
-function addControllers(router, dir) {
+function addRouters(router, dir) {
     fs.readdirSync(__dirname + '/' + dir).filter((f) => {
         return f.endsWith('.js');
     }).forEach((f) => {
@@ -40,8 +40,8 @@ function addControllers(router, dir) {
 
 module.exports = function (dir) {
     let
-        controllers_dir = dir || 'controllers',
+        routers_dir = dir || 'routers',
         router = require('koa-router')();
-    addControllers(router, controllers_dir);
+        addRouters(router, routers_dir);
     return router.routes();
 };
