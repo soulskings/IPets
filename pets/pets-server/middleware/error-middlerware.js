@@ -1,5 +1,4 @@
 // 处理异常中间件
-const { template } = require('../api/code')
 const errorController = async (ctx, next) => {
   try {
     await next()
