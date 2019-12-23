@@ -56,6 +56,4 @@ const replaceTokenController = async (ctx, next) => {
   ctx.body = body
 }
 
-module.exports = {
-  replaceTokenController: replaceTokenController
-}
+module.exports = replaceTokenController
