@@ -3,5 +3,5 @@ const cateModel = {
   name: String, // 名称
   img: String // 图片
 }
-const cateDb = petsDb.model('cates', new Schema(cateModel))
+const cateDb = PetsDb.model('cates', new Schema(cateModel))
 module.exports = cateDb
