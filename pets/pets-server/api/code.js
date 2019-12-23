@@ -1,9 +1,9 @@
 const resCode = {
-  SUCCESS: '000000', // 业务成功
-  NO_LOGIN: '000001', // 未登录
-  LOGIN_FAILURE: '000002', // 登录失效
-  ERROR_PARAMS: '000010', // 请求参数错误
-  ERROR: '999999' // 业务异常码
+  SUCCESS: '0000', // 业务成功
+  NO_LOGIN: '0001', // 未登录
+  LOGIN_FAILURE: '0002', // 登录失效
+  ERROR_PARAMS: '0010', // 请求参数错误
+  ERROR: '9999' // 业务异常码
 }
 
 const message = {
