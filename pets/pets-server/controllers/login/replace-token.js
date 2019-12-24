@@ -1,9 +1,9 @@
 // 置换token
-const CustomError = require('../../utils/error-class.js')
-const { template, resCode, message } = require('../../api/code')
-const { fetchGet } = require('../../utils/request')
-const { wxApi, appid, secret } = require('../../api/wx-api')
-const saveToken = require('../../dbheleper/login/replace-token')
+const CustomError = require('@utils/error-class.js')
+const { template, resCode, message } = require('@api/code')
+const { fetchGet } = require('@utils/request')
+const { wxApi, appid, secret } = require('@api/wx-api')
+const saveToken = require('@server/dbheleper/login/replace-token')
 const jwt = require('jsonwebtoken')
 
 const replaceTokenController = async (ctx, next) => {

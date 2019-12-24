@@ -18,5 +18,5 @@ const detailModel = {
   fad_list: Array, // 常见疾病文章列表
   new_list: Array, // 新手必读知识文章列表
 }
-const detailDb = petsDb.model('details', new Schema(detailModel))
+const detailDb = PetsDb.model('details', new Schema(detailModel))
 module.exports = detailDb

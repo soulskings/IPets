@@ -1,5 +1,5 @@
 // 查找宠物详情
-const detailDb = require('../../models/pets/detail')
+const detailDb = require('@server/models/pets/detail')
 const findDetail = (pid) => {
   return new Promise((resolve, reject) => {
     detailDb.find({pid: pid}).lean().exec(function (err, res) {
