@@ -1,18 +1,18 @@
-.classification {
-  padding: 20rpx;
+.classification-box {
   display: flex;
   flex-wrap: wrap;
 }
 
-.classification > view {
+.classification-box > view {
   flex: 1;
 }
 
-.classification > view image {
+.classification-box > view image {
   width: 350rpx;
+  height: 262.5rpx;
 }
 
-.classification > view .classification-name {
+.classification-box > view .classification-name {
   display: block;
   text-align: center;
 }

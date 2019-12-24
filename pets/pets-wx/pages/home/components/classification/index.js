@@ -1,5 +1,13 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: wupeng
+ * @Date: 2019-12-20 09:46:11
+ * @LastEditors  : wupeng
+ * @LastEditTime : 2019-12-24 12:23:08
+ */
 // pages/home/components/classification/index.js
-Component({
+Page({
     data: {
         srcList:[
             {

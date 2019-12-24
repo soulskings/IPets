@@ -1,2 +1,13 @@
 <!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="user" hover-class="none" hover-stop-propagation="false">
+    <view class="user-info" hover-class="none" hover-stop-propagation="false">
+        <view wx:if="{{false}}" class="userinfo">
+            <image class="head-sculpture" src="/images/8.jpg" background-size="cover"></image>
+            <text class="user-name">本人名称</text>
+        </view>
+        <view wx:else class="userinfo" style="margin-bottom:50rpx;">
+            <image class="head-sculpture" src="/images/8.jpg" background-size="cover"></image>
+            <button class="weui-btn mini-btn" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点击登录账户</button>
+        </view>
+    </view>
+</view>

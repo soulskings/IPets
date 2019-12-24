@@ -1,2 +1,5 @@
 <!--pages/home/index.wxml-->
-<classification></classification>
+<view class="home" hover-class="none" hover-stop-propagation="false">
+    <classification></classification>
+    <hot-pet></hot-pet>
+</view>

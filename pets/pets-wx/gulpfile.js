@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: wupeng
+ * @Date: 2019-12-19 18:16:54
+ * @LastEditors  : wupeng
+ * @LastEditTime : 2019-12-24 11:52:47
+ */
 const gulp = require('gulp')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
@@ -23,7 +31,14 @@ gulp.task('sass_wxss', function () {
         .pipe(rename({extname: ".wxss"}))
         .pipe(gulp.dest('wxss'));
 });
+gulp.task('sass_appwxss', function () {
+    return gulp.src('./*.scss')
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(rename({extname: ".wxss"}))
+        .pipe(gulp.dest('./'));
+});
 gulp.task('watch', function () {
     gulp.watch("pages/**/*.scss", gulp.parallel("sass_pages"))
     gulp.watch("wxss/*.scss", gulp.parallel("sass_wxss"))
+    gulp.watch("./*.scss", gulp.parallel("sass_appwxss"))
 });
