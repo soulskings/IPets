@@ -1,5 +1,23 @@
+.user-info {
+  padding: 50rpx 0;
+  margin-bottom: 20rpx;
+  border-bottom: 10rpx solid #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+
 .head-sculpture {
   width: 100rpx;
   height: 100rpx;
   border-radius: 50%;
+  margin: 0 60rpx 0 60rpx;
+}
+
+.my-item {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 100rpx;
+  font-size: 28rpx;
 }

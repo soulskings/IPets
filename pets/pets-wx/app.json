@@ -1,7 +1,9 @@
 {
     "pages": [
         "pages/user/index",
-        "pages/home/index"
+        "pages/home/index",
+        "pages/userCollection/index",
+        "pages/userPrivacy/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
