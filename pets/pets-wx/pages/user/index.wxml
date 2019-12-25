@@ -9,11 +9,16 @@
         <image class="head-sculpture" src="/images/8.jpg" background-size="cover"></image>
         <button class="weui-btn mini-btn" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点击登录账户</button>
     </view>
+    <view class="line"></view>
     <!--列表-->
     <view class="my-item">
         <navigator url="/pages/userCollection/index" hover-class="navigator-hover">我的收藏</navigator>
     </view>
     <view class="my-item">
         <navigator url="/pages/userPrivacy/index" hover-class="navigator-hover">隐私政策</navigator>
+    </view>
+    <view class="line"></view>
+    <view class="item-btn" hover-class="navigator-hover">
+        退出账号
     </view>
 </view>
