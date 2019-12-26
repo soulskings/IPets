@@ -1,5 +1,5 @@
 // 查找种类
-const cateDb = require('../../models/pets/cate')
+const cateDb = require('@server/models/pets/cate')
 const findCate = () => {
   return new Promise((resolve, reject) => {
     cateDb.find().lean().exec(function (err, res) {
