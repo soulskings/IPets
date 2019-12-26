@@ -4,7 +4,7 @@
  * @Author: wupeng
  * @Date: 2019-12-26 15:09:40
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-26 17:07:34
+ * @LastEditTime : 2019-12-26 18:18:31
  */
 // pages/petStrategyList/components/strategyList/index.js
 Component({
@@ -82,6 +82,9 @@ Component({
                 }
             }
             console.log(params,'获取数据')
+        },
+        goDetail(e) {
+            console.log(e,'goDetail')
         }
     }
 })

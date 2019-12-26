@@ -4,7 +4,7 @@
  * @Author: wupeng
  * @Date: 2019-12-26 14:24:22
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-26 17:20:26
+ * @LastEditTime : 2019-12-26 18:23:30
  */
 // components/service/strategyList/index.js
 Component({
@@ -71,5 +71,8 @@ Component({
             })
             console.log(this.data.result)
         },
+        cardClick(e) {
+            this.triggerEvent('click', e.currentTarget.dataset.result)
+        }
     }
 })

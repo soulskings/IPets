@@ -1,0 +1,8 @@
+<!--pages/petStrategyList/components/strategySearch/index.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <input bindblur="search" placeholder="搜索宠物攻略" />
+
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        指导价
+    </view>
+</view>

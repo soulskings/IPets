@@ -4,7 +4,7 @@
  * @Author: wupeng
  * @Date: 2019-12-25 14:49:07
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-26 16:56:26
+ * @LastEditTime : 2019-12-26 18:06:31
  */
 // pages/petStrategy/index.js
 Page({
@@ -13,13 +13,13 @@ Page({
      * 页面的初始数据
      */
     data: {
-        inputValue: '1'
+        // inputValue: '1'
     },
     search(e) {
+        console.log(e)
         this.setData({
-            inputValue: e.detail.value,
             searchObj:{
-                value: e.detail.value,
+                value: e.detail,
                 price: 3
             }
         })
