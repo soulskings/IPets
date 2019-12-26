@@ -1,12 +1,14 @@
 const CustomError = require('@utils/error-class.js')
 const { template, resCode, message } = require('@api/code')
-const List = require('@server/models/list')
+const List = require('@server/models/pets/list')
+const tokenDb = require('../../models/login/replace-token')
 
 /**
  * 宠物列表
  *
  * @param {Number} page
- * @param {Count} count
+ * @param {Number} count
+ * @param {String} cid
  */
 const petListController = async (ctx, next) => {
     const {page = 0, count = 20, cid} = ctx.request.body
@@ -25,9 +27,13 @@ const petListController = async (ctx, next) => {
                 throw new CustomError({
                     code: resCode.ERROR,
                     data: err,
-                    message: 'cid is required'
+                    message: ''
                 })
             }else{
+                new tokenDb().save({
+                    user,
+                    token: Token
+                })
                 total = res.length;
                 data = res.slice(page * count, (page + 1) * count)
                 resolve()

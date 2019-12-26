@@ -1,9 +1,9 @@
 const listModel = {
-    pid: {
-      type: [String],
+    cid: {
+      type: String,
       index: true
     },
-    cid: String,
+    pid: String,
     name: String,
     shape: String,
     img_url: String
