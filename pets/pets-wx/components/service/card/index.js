@@ -13,9 +13,12 @@ Component({
      */
     properties: {
         config: {
-            cencelCollectBtn: {
-                type: Boolean,
-                value: false 
+            type: Object,
+            value: {
+                cencelCollectBtn: {
+                    type: Boolean,
+                    value: false
+                }
             }
         },
         dataObj: { // 属性名
