@@ -4,7 +4,7 @@
  * @Author: wupeng
  * @Date: 2019-12-20 09:46:11
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-24 12:23:08
+ * @LastEditTime : 2019-12-25 11:59:43
  */
 // pages/home/components/classification/index.js
 Page({
@@ -12,25 +12,29 @@ Page({
         srcList:[
             {
                 url:'/images/8.jpg',
-                type: '狗'
+                type: '0',
+                name: '狗'
             },
             {
                 url:'/images/8.jpg',
-                type: '猫'
+                type: '1',
+                name: '猫'
             },
             {
                 url:'/images/8.jpg',
-                type: '兔子'
+                type: '2',
+                name: '兔子'
             },
             {
                 url:'/images/8.jpg',
-                type: '鼠'
+                type: '3',
+                name: '鼠'
             }
         ]
     },
-    methods:{
-      show: function(){
-        console.log("show........")
-      }
+    petClick(e) {
+      wx.navigateTo({
+          url: `/pages/petChoice/index?type=${e.currentTarget.dataset.map.type}`
+      })
     }
   })

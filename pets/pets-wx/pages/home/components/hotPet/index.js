@@ -4,7 +4,7 @@
  * @Author: wupeng
  * @Date: 2019-12-24 14:45:31
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-24 16:21:12
+ * @LastEditTime : 2019-12-25 11:04:22
  */
 // pages/home/components/hotPet/index.js
 Page({
@@ -17,7 +17,7 @@ Page({
             [
                 {
                     id: 1,
-                    name: 'ssfsf狗'
+                    name: 'ssfsf电饭锅电饭锅发的狗'
                 },
                 {
                     id: 2,
@@ -51,7 +51,7 @@ Page({
     onLoad: function (options) {
 
     },
-
+    
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

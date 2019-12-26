@@ -1,9 +1,12 @@
 {
     "pages": [
+        "pages/petStrategyList/index",
+        "pages/petChoice/index",
         "pages/home/index",
         "pages/user/index",
         "pages/userCollection/index",
-        "pages/userPrivacy/index"
+        "pages/userPrivacy/index",
+        "pages/petStrategyDetail/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

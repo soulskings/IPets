@@ -1,22 +1,13 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: wupeng
- * @Date: 2019-12-20 09:46:11
- * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-25 11:04:05
- */
-// pages/home/home.js
-import { requestPost } from '../../utils/request'
-import { replaceToken } from '../../utils/requesUrl'
+// pages/petStrategyDetail/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        
+
     },
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -28,14 +19,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        console.log(wx.env)
-        requestPost(replaceToken,{code:1})
-        .then((res) => {
-            if (1) {}
-        })
-        .catch(() => {
 
-        })
     },
 
     /**

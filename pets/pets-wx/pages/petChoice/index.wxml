@@ -1,0 +1,25 @@
+<!--pages/petChoice/index.wxml-->
+<view class="pet-choice" hover-class="none" hover-stop-propagation="false">
+    <view class="category-box" hover-class="none" hover-stop-propagation="false">
+        <text class="{{item.type == category ? 'active' : ''}}" selectable="false" space="false" decode="false"
+            wx:for="{{categoryList}}" wx:key="index" data-category="{{item.type}}" bindtap = "categoryClick">
+            {{item.name}}
+        </text>
+    </view>
+    <view class="pet-box" hover-class="none" hover-stop-propagation="false">
+        <view class="classification-type" selectable="false" space="false" decode="false">
+            热门宠物
+        </view>
+        <label wx:for="{{petList}}" wx:key="index" class="pet-label" selectable="false" space="false" decode="false"
+                data-pid="{{item.pid}}" bindtap = "petClick">
+            {{item.name}}
+        </label>
+        <view class="classification-type all-pet" selectable="false" space="false" decode="false">
+            全部宠物
+        </view>
+        <label wx:for="{{petList}}" wx:key="index" class="pet-label" selectable="false" space="false" decode="false"
+                data-pid="{{item.pid}}" bindtap = "petClick">
+            {{item.name}}
+        </label>
+    </view>
+</view>

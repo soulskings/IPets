@@ -2,20 +2,27 @@
  * @Descripttion: 
  * @version: 
  * @Author: wupeng
- * @Date: 2019-12-20 09:46:11
+ * @Date: 2019-12-25 14:49:07
  * @LastEditors  : wupeng
- * @LastEditTime : 2019-12-25 11:04:05
+ * @LastEditTime : 2019-12-26 16:56:26
  */
-// pages/home/home.js
-import { requestPost } from '../../utils/request'
-import { replaceToken } from '../../utils/requesUrl'
+// pages/petStrategy/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        
+        inputValue: '1'
+    },
+    search(e) {
+        this.setData({
+            inputValue: e.detail.value,
+            searchObj:{
+                value: e.detail.value,
+                price: 3
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面加载
@@ -28,14 +35,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        console.log(wx.env)
-        requestPost(replaceToken,{code:1})
-        .then((res) => {
-            if (1) {}
-        })
-        .catch(() => {
 
-        })
     },
 
     /**
