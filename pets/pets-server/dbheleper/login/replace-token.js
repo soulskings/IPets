@@ -11,10 +11,10 @@ const saveToken = ({ user, Token }) => {
         new tokenDb().findOneAndUpdate(query, { token: Token, time: user.time })
       } else {
         // 如果不存在用户则插入用户信息
-        new tokenDb().save({
+        new tokenDb({
           user,
           token: Token
-        })
+        }).save()
       }
       resolve()
     })

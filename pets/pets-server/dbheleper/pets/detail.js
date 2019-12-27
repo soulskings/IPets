@@ -2,7 +2,7 @@
 const detailDb = require('@server/models/pets/detail')
 const findDetail = (pid) => {
   return new Promise((resolve, reject) => {
-    detailDb.find({pid: pid}).lean().exec(function (err, res) {
+    detailDb.find({pid: pid}).lean().exec((err, res) => {
       if (err) {
         return reject()
       }
