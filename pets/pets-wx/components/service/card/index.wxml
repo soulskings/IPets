@@ -1,3 +1,0 @@
-<view class="" hover-class="none" hover-stop-propagation="false" data-result="{{result}}" bindtap = "cardClick">
-    {{result.pid}}-------{{result.name}}
-</view>
