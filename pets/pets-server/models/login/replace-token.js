@@ -1,6 +1,6 @@
 const tokenModel = {
   openid: {
-    type: [String],
+    type: String,
     index: true
   }, // 用户id(开启索引提升查询效率)
   session_key: String, // session_key

@@ -22,7 +22,7 @@ const replaceTokenController = async (ctx, next) => {
     })
 
     // 校验失败
-    if (res.errcode !== 0) {
+    if (res.errcode && res.errcode !== 0) {
       throw new CustomError({
         code: res.errcode,
         data: res,
