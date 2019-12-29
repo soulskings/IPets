@@ -1,0 +1,12 @@
+<!--pages/home/components/hotPet/index.wxml-->
+<view class="hot-pet" hover-class="none" hover-stop-propagation="false">
+    <text class='classification-type'>热门宠物攻略</text>
+    <view class="pet-box" wx:for="{{hotData}}" wx:key="index">
+        <text class="label-type">狗：</text>
+        <view>
+            <text class="label-name" wx:for="{{item}}" wx:key="index">
+                {{item.name}}
+            </text>
+        </view>
+    </view>
+</view>

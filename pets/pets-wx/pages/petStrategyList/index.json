@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "strategySearch": "./components/strategySearch/index",
+        "strategyList": "./components/strategyList/index"
+    }
+}

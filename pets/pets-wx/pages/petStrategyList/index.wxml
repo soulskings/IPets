@@ -1,0 +1,5 @@
+<!--pages/petStrategy/index.wxml 宠物攻略页-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <strategySearch bindsearch="search"></strategySearch>
+    <strategyList inputValue="{{searchObj}}"></strategyList>
+</view>

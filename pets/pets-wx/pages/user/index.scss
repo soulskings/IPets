@@ -1,0 +1,41 @@
+@import '../../wxss/style';
+.user-info {
+    padding: 50rpx 0;
+    margin-bottom: 20rpx;
+    display:flex;
+    align-items:center;
+}
+.head-sculpture {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin:0 60rpx 0 60rpx;
+}
+.my-item{
+    position: relative;
+    border-bottom: 1px solid $f1;
+    height: 120rpx;
+    line-height: 120rpx;
+    padding: 0 50rpx;
+    font-size:28rpx;
+    &::after {
+        content: '>';
+        position: absolute;
+        right: 50rpx;
+        top: 8rpx;
+        z-index: 10;
+        font-size: 40rpx;
+        color: $color999;
+    }
+}
+.line{
+    width: 100%;
+    height: 20rpx;
+    background-color: $f5;
+}
+.item-btn{
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    border: 1px solid $f1;
+}

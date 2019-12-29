@@ -1,0 +1,22 @@
+@import '../../../../wxss/style';
+
+.hot-pet {
+    .pet-box{
+        display: flex;
+    }
+    .label-type{
+        margin-top: 20rpx;
+    }
+    .label-name{
+        min-width: 120rpx;
+        height: 80rpx;
+        display: inline-block;
+        background-color: $label;
+        text-align: center;
+        padding: 0 10rpx;
+        margin: 5rpx 10rpx;
+        line-height: 25rpx;
+        font-size: 30rpx;
+        border-radius: 10rpx;
+    }
+}

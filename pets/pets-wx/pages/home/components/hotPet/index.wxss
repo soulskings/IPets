@@ -1,0 +1,20 @@
+.hot-pet .pet-box {
+  display: flex;
+}
+
+.hot-pet .label-type {
+  margin-top: 20rpx;
+}
+
+.hot-pet .label-name {
+  min-width: 120rpx;
+  height: 80rpx;
+  display: inline-block;
+  background-color: #e6f1f1;
+  text-align: center;
+  padding: 0 10rpx;
+  margin: 5rpx 10rpx;
+  line-height: 25rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,9 @@
+<!--pages/petStrategyList/components/strategyList/index.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <view class="" hover-class="none" hover-stop-propagation="false"
+        wx:for="{{petList}}" wx:key="index">
+      <!-- <card dataObj="{{JSON.stringify(item)}}" a="{{a}}"></card> {{item.name}} 是对方答复 -->
+      <card dataObj="{{item}}" bindclick = "goDetail"></card>
+      {{inputValue}}
+  </view>
+</view>

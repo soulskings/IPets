@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "classification": "/pages/home/components/classification/index",
+    "hot-pet": "/pages/home/components/hotPet/index"
+  }
+}

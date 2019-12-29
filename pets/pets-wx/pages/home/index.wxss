@@ -1,0 +1,4 @@
+.home {
+  padding: 20rpx;
+  background-color: #fff;
+}

@@ -1,0 +1,18 @@
+.classification-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.classification-box > view {
+  flex: 1;
+}
+
+.classification-box > view image {
+  width: 350rpx;
+  height: 262.5rpx;
+}
+
+.classification-box > view .classification-name {
+  display: block;
+  text-align: center;
+}

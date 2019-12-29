@@ -1,0 +1,11 @@
+<!--pages/home/components/classification/index.wxml-->
+<view class="classification" hover-class="none" hover-stop-propagation="false">
+    <text class='classification-type'>宠物分类</text>
+    <view class="classification-box">
+        <view class="fication" wx:for="{{srcList}}" wx:key="srcList" data-map="{{item}}" bindtap="petClick">
+            
+            <!-- <image src="{{item.url}}" /> -->
+            <text class='classification-name'>{{item.name}}</text>
+        </view>
+    </view>
+</view>

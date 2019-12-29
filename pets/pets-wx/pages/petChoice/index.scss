@@ -1,0 +1,43 @@
+@import '../../wxss/style';
+.pet-choice{
+    display: flex;
+    border-top: 1px solid $f1;
+    .category-box{
+        width: 200rpx;
+        background-color: $f5;
+        height: 100vh;
+        text{
+            width: 100%;
+            height: 80rpx;
+            line-height: 100%;
+            display: block;
+            text-align: center;
+        }
+        text.active{
+            background-color: $fff;
+            color: $color666;
+        }
+    }
+    .pet-box{
+        margin-left: 10rpx;
+        flex: 1;
+        .all-pet{
+            margin-top: 30rpx;
+        }
+        .pet-label{
+            display: inline-block;
+            min-width: 120rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            background-color: $label;
+            border-radius: 10rpx;
+            padding: 0 10px;
+            text-align: center;
+            color: $color666;
+            margin-right: 10rpx;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
