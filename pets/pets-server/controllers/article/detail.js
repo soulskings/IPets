@@ -10,7 +10,11 @@ const detailController = async (ctx, next) => {
     articleId: articleId.toString(), 
     articleType: articleType.toString()
   })
-  ctx.body = article
+  ctx.body = {
+    code: resCode.SUCCESS,
+    data: article,
+    message: message.SUCCESS
+  }
 }
 
 module.exports = detailController
