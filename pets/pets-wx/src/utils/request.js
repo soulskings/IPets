@@ -25,9 +25,10 @@
  *   }
  * })
  */
+import store from '@/store/index.js'
 const applyDataTemplate = (headers = {}) => {
     const template = {
-      token: '',
+      token: store.state.user.token,
       headers
     }
     return template // 服务端接受格式要求
@@ -73,7 +74,11 @@ const request = (url, options = {}) => {
         })
     })
 }
-
+const to = (promise) => {
+  return promise
+    .then(data => [data, null])
+    .catch(err => [undefined, err])
+}
 /**
  * Post请求
  * 返回数据格式经过to方法处理
@@ -81,7 +86,7 @@ const request = (url, options = {}) => {
 function requestPost (url, data, options = {}) {
     options.method = 'POST'
     options.data = data
-    return request(url, options)
+    return to(request(url, options))
 }
 
 /**
@@ -91,7 +96,7 @@ function requestPost (url, data, options = {}) {
 function requestGet(url, data, options = {}) {
     options.method = 'GET'
     options.data = data
-    return request(url, options)
+    return to(request(url, options))
 }
 
 module.exports = {

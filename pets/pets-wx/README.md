@@ -1,4 +1,6 @@
 # pets-wx
+## ide    
+## hbuilderx
 
 ## Project setup
 ```
