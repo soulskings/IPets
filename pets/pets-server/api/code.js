@@ -29,6 +29,12 @@ const template = {
     code: resCode.NO_FIND_PET,
     data: {},
     message: '未查询到相应宠物'
+  },
+  // 未登录或登录失效
+  noLogin: {
+    code: resCode.NO_LOGIN,
+    data: null,
+    message: '登录失效'
   }
 }
 

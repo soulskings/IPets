@@ -1,6 +1,6 @@
 // 处理异常中间件
 const { template } = require('../api/code')
-const errorController = async (ctx, next) => {
+const errorMiddleware = async (ctx, next) => {
   try {
     await next()
   } catch (err) {
@@ -14,4 +14,4 @@ const errorController = async (ctx, next) => {
   }
 }
 
-module.exports = errorController
+module.exports = errorMiddleware
