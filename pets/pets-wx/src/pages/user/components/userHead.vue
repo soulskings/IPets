@@ -23,6 +23,7 @@
 	import {
 		replaceToken
 	} from '@/utils/requesUrl.js'
+	import { resCode } from '@/utils/code.js'
 	import {
 		mapActions,
 		mapGetters
@@ -73,11 +74,14 @@
 					code: (success && success.code) || ''
 				})
 				console.log(tokenSuccess)
-				if (tokenSuccess.code === '000000') {
-					
+				if (tokenSuccess.code === resCode.SUCCESS) {
+					this.setToken(tokenSuccess && tokenSuccess.data && tokenSuccess.data.token)
+				} else if (tokenSuccess.code === resCode.ERROR) {
+					uni.showToast({
+						title: '标题',
+						duration: tokenSuccess.message
+					})
 				}
-				this.setToken(tokenSuccess && tokenSuccess.data && tokenSuccess.data.token)
-				console.log(this.$store.state.user)
 			},
 			// 获取用户信息
 			infoFn() {
