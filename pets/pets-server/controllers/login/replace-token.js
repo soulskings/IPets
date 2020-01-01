@@ -50,6 +50,7 @@ const replaceTokenController = async (ctx, next) => {
       code: resCode.SUCCESS,
       data: {
         token: Token,
+        openid: user.openid
       },
       message: message.SUCCESS
     }
