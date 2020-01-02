@@ -1,5 +1,5 @@
 <template>
-	<view class="user" hover-class="none" hover-stop-propagation="false">
+	<view class="user page-padding" hover-class="none" hover-stop-propagation="false">
 		<!-- 头像-->
 		<user-head></user-head>
 		<!--列表-->

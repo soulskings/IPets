@@ -1,0 +1,10 @@
+// 由于uni 不支持组件css的修改机制   
+// 此文件专门用于动态修改组件的样式变化
+page {
+/* cTag 开始 */	
+	.tag-active .c-tag{
+		background: $uni-main-color;
+		color: $uni-bg-color;
+	}
+/* cTag 结束 */
+}

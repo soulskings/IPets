@@ -1,5 +1,5 @@
 <template>
-	<view class="pet-choice" hover-class="none" hover-stop-propagation="false">
+	<view class="pet-choice page-padding" hover-class="none" hover-stop-propagation="false">
 		<view class="category-box" hover-class="none" hover-stop-propagation="false">
 			<text :class="{active: item.type == category}" selectable="false" space="false" decode="false" v-for="(item,index) in categoryList"
 				:key="index" @click="categoryClick(item)">

@@ -1,7 +1,7 @@
 <template>
 	<view class="head">
-		<image class="photo" src="../../../static/images/8.jpg" mode=""></image>
 		<input class="search-input" type="text" v-model="searchVal" placeholder="搜索宠物攻略" @focus="search"/>
+		<button class="cancel-search">取消</button>
 	</view>
 </template>
 
@@ -9,16 +9,8 @@
 	export default {
 		data() {
 			return {
-				searchVal: '',
-				list:'',
+				
 			};
-		},
-		methods: {
-			search() {
-				uni.navigateTo({
-					url: `/pages/petSearch/index`
-				})
-			}
 		}
 	}
 </script>
@@ -28,9 +20,12 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	.photo{
-		width: 80rpx;
+	.cancel-search{
+		background-color: $uni-bg-color-grey;
+		width: 150rpx;
 		height: 80rpx;
-		border-radius: 50%;
+		line-height:80rpx;
+		color: $uni-text-color;
+		border-radius: 20rpx;
 	}
 </style>

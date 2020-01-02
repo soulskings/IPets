@@ -13,7 +13,11 @@
 </script>
 
 <style lang="scss">
+	@import '@/static/scss/common.scss';
 	/*每个页面公共css */
+	.page-padding {
+		padding: 0 20rpx;
+	}
 	.classification-type {
 		font-size: 36rpx;
 		color: $uni-text-color-title;
@@ -27,5 +31,8 @@
 		text-align: center;
 		padding: 19rpx 0;
 		border:1rpx solid $uni-border-color;
+	}
+	.main-color{
+		background-color: $uni-main-color
 	}
 </style>
