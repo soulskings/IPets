@@ -1,10 +1,11 @@
 <template>
 	<view>
-		<c-nav :list="list" :activeDef="active"></c-nav>
+		<c-nav :list="list" :activeDef="active" @click="navClick"></c-nav>
 	</view>
 </template>
 
 <script>
+	import eventBus from '@/utils/eventBus.js'
 	import cNav from '@/components/common/cNav.vue'
 	export default {
 		components: {
@@ -24,6 +25,11 @@
 				],
 				active: '1'
 			};
+		},
+		methods: {
+			navClick(data) {
+				eventBus.$emit('navTabClick', data)
+			}
 		}
 	}
 </script>

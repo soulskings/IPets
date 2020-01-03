@@ -7,6 +7,7 @@
 </template>
 
 <script>
+	import eventBus from '@/utils/eventBus.js'// 通过eventBus进行兄弟间通信
 	import cCard from '@/components/service/cCard.vue'
 	export default {
 		name: 'collect-header',
@@ -15,6 +16,7 @@
 		},
 		data() {
 			return {
+				petType: '',
 				list: [{
 						id: 1,
 						url: '../../static/images/8.jpg',
@@ -30,6 +32,11 @@
 				],
 			};
 		},
+		created() {
+			eventBus.$on('navTabClick', (data) => {
+				this.navClickOn(data);
+			})
+		},
 		methods: {
 			// 某条记录点击事件
 			cardClick(data) {
@@ -37,6 +44,11 @@
 			},
 			// 取消收藏点击事件
 			cancelBtn(data) {
+				console.log(data)
+			},
+			// 切换栏回调
+			navClickOn(data) {
+				this.petType = data.id;
 				console.log(data)
 			}
 		}
