@@ -35,4 +35,12 @@
 	.main-color{
 		background-color: $uni-main-color
 	}
+	.btn{
+		min-width: 120rpx;
+		height: 60rpx;
+		font-size: 30rpx;
+		text-align: center;
+		line-height: 60rpx;
+		
+	}
 </style>

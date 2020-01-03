@@ -4,16 +4,20 @@
 		<view class="tag-box">
 			<c-tag class="tag-item" :class="{'tag-active': tag.id === current}" 
 			v-for="(tag,index) in tagList" :key="index" :label="tag.id" :value="tag.name" @click="tabClick"></c-tag>
-		<uni-pad dsf ></uni-pad>
+		</view>
+		<view class="card-box">
+			<c-card class="card-item" v-for="(item,index) in list" :key="index" :dataObj='item' @click="cardClick"></c-card>
 		</view>
 	</view>
 </template>
 
 <script>
 	import cTag from '@/components/common/cTag.vue'
+	import cCard from '@/components/service/cCard.vue'
 	export default {
 		components: {
-			cTag
+			cTag,
+			cCard
 		},
 		data() {
 			return {
@@ -21,11 +25,15 @@
 				list: [
 					{
 						id: 1,
-						name: 'sdfs'
+						url: '../../static/images/8.jpg',
+						name: 'sdfs水电费水电费水电费水电费发',
+						dec: '描述'
 					},
 					{
 						id: 2,
-						name: '地方斯蒂芬'
+						name: '地方斯蒂芬',
+						url: '../../static/images/8.jpg',
+						dec: 'sldfskdlfsldsldfskl绿山咖啡就考试了地方及时两地分居乐山大佛地方及时的方式来地方是登录父级老师的副驾驶两地分居萨菲罗斯'
 					}
 				],
 				tagList: [
@@ -46,6 +54,7 @@
 			
 		},
 		methods: {
+			// 
 			tabClick(val) {
 				let valNum = Number(val);
 				if (this.current === valNum) {
@@ -53,6 +62,10 @@
 				} else {
 					this.current = valNum;
 				}
+			},
+			// 某条记录点击事件
+			cardClick(data) {
+				console.log(data)
 			},
 			onClickItem(e) {
 				console.log(e)
@@ -69,13 +82,21 @@
 <style lang="scss">
 	.search-result{
 		margin-top: 20rpx;
-	}
-	.tag-box{ 
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.tag-item {
-		margin-right: 20rpx;
+		.tag-box{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.tag-item {
+			margin-right: 20rpx;
+		}
+		.card-box {
+			margin-top: 20rpx;
+			.card-item{
+				display: block;
+				border-bottom: 1rpx solid $uni-border-color;
+				margin-bottom: 20rpx;
+			}
+		}
 	}
 	
 </style>

@@ -1,8 +1,8 @@
 <template>
 	<view class="home page-padding" hover-class="none" hover-stop-propagation="false">
 	    <head-search></head-search>
-	    <classification></classification>
-	    <hot-pet></hot-pet>
+	    <!-- <classification></classification>
+	    <hot-pet></hot-pet> -->
 	</view>
 </template>
 
