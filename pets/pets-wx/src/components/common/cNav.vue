@@ -13,6 +13,10 @@
 			list: {
 				type: Array,
 				default: () => []
+			},
+			activeDef: {
+				type: String,
+				default: ''
 			}
 		},
 		data() {
@@ -21,7 +25,7 @@
 			};
 		},
 		mounted() {
-			
+			this.active = this.activeDef;
 		},
 		methods: {
 			navClick(item) {
@@ -43,11 +47,11 @@
 			line-height: 80rpx;
 			padding: 0 10rpx;
 			box-sizing: border-box;
+			flex:1;
 		}
 		.nav-list.active{
 			border-bottom: 4rpx solid $uni-main-color;
 			color: $uni-main-color;
-			cursor: pointer;
 		}
 	}
 </style>

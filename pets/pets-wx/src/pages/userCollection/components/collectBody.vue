@@ -1,29 +1,21 @@
-<!-- 搜索结果页 -->
 <template>
-	<view class="search-result">
-		<view class="tag-box">
-			<c-tag class="tag-item" :class="{'tag-active': tag.id === current}" 
-			v-for="(tag,index) in tagList" :key="index" :label="tag.id" :value="tag.name" @click="tabClick"></c-tag>
-		</view>
+	<view class="collect-header">
 		<view class="card-box">
-			<c-card class="card-item" v-for="(item,index) in list" :key="index" :dataObj='item' @click="cardClick"></c-card>
+			<c-card class="card-item" v-for="(item,index) in list" :key="index" :dataObj='item' @click="cardClick" @cancelBtn="cancelBtn"></c-card>
 		</view>
 	</view>
 </template>
 
 <script>
-	import cTag from '@/components/common/cTag.vue'
 	import cCard from '@/components/service/cCard.vue'
 	export default {
+		name: 'collect-header',
 		components: {
-			cTag,
 			cCard
 		},
 		data() {
 			return {
-				activeColor: '#eeeb2b',
-				list: [
-					{
+				list: [{
 						id: 1,
 						url: '../../static/images/8.jpg',
 						name: 'sdfs水电费水电费水电费水电费发',
@@ -36,58 +28,42 @@
 						dec: 'sldfskdlfsldsldfskl绿山咖啡就考试了地方及时两地分居乐山大佛地方及时的方式来地方是登录父级老师的副驾驶两地分居萨菲罗斯'
 					}
 				],
-				tagList: [
-					{
-						id: 1,
-						name: '宠物'
-					},
-					{
-						id: 2,
-						name: '攻略'
-					}
-				],
-				current: -1
 			};
 		},
-		mounted() {
-			
-		},
 		methods: {
-			// 标签切换方法
-			tabClick(val) {
-				let valNum = Number(val);
-				if (this.current === valNum) {
-					this.current = '';
-				} else {
-					this.current = valNum;
-				}
-			},
 			// 某条记录点击事件
 			cardClick(data) {
 				console.log(data)
 			},
+			// 取消收藏点击事件
+			cancelBtn(data) {
+				console.log(data)
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.search-result{
+	.collect-header {
 		margin-top: 20rpx;
-		.tag-box{
+
+		.tag-box {
 			display: flex;
 			flex-wrap: wrap;
 		}
+
 		.tag-item {
 			margin-right: 20rpx;
 		}
+
 		.card-box {
 			margin-top: 20rpx;
-			.card-item{
+
+			.card-item {
 				display: block;
 				border-bottom: 1rpx solid $uni-border-color;
 				padding: 10rpx 0;
 			}
 		}
 	}
-	
 </style>

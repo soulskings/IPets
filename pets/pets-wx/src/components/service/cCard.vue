@@ -1,11 +1,10 @@
 <template>
 	<view class="c-card" hover-class="none" hover-stop-propagation="false" @click = "cardClick">
-	    <!-- {{result.pid}}   {{result.name}} -->
 		<img class="card-img" :src="result.url" alt="">
 		<view class="card-content">
 			<text class="card-title">{{result.name}}</text>
 			<text class="card-dec">{{result.dec}}</text>
-			<button class="cancel-btn .btn" v-if="configDef.cencelCollectBtn">取消收藏</button>
+			<button class="cancel-btn .btn" v-if="configDef.cencelCollectBtn" @click.stop = "cancelBtnClick">取消收藏</button>
 		</view>
 	</view>
 </template>
@@ -16,21 +15,21 @@
 		props: {
 			config: {
 				type: Object,
-				default: () => null
+				default: null
 			},
 			options: {
 				type: Object,
-				default: () => null
+				default: null
 			},
 			dataObj: { // 属性名
 				type: Object,
-				default: () => null
+				default: null
 			}
 		},
 		data() {
 			return {
 				configDef: {
-					cencelCollectBtn: true, // 取消按钮
+					cencelCollectBtn: false, // 取消按钮
 					isItemData: false // 是否返回当前行的所有数据
 				},
 				optionsDef: { // 默认字段key
@@ -47,7 +46,7 @@
 		},
 		methods: {
 			// 初始化数据
-			init(obj) {
+			init() {
 				this.options ? Object.keys(this.options).forEach((key) => {
 					this.optionsDef[key] = this.options[key];
 				}): '';
@@ -55,15 +54,20 @@
 					this.$set(this.result,key,this.dataObj[key])
 					// this.result[key] = this.dataObj[key];
 				})
-				console.log(this.result)
 			},
 			// 点击触发事件
 			cardClick() {
+				this.$emit('click', this.isItemDataFn())
+			},
+			// 取消收藏按钮
+			cancelBtnClick() {
+				this.$emit('cancelBtn', this.isItemDataFn())
+			},
+			isItemDataFn() {
 				this.config ? Object.keys(this.config).forEach((key) => {
 					this.configDef[key] = this.config[key];
 				}): '';
-				let data = this.configDef && this.configDef.isItemData ? this.dataObj : this.result.id;
-				this.$emit('click', data)
+				return this.configDef && this.configDef.isItemData ? this.dataObj : this.result.id;
 			},
 		}
 	}
@@ -90,12 +94,13 @@
 	.card-title{
 		display: block;
 		color: $uni-text-color-title;
-		font-size: 36rpx;
+		font-size: 32rpx;
 		width: 200rpx;
-		height: 36px;
+		height: 32rpx;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		line-height:32rpx;
 	}
 	.card-dec{
 		display: block;
