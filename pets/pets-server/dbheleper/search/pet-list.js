@@ -1,4 +1,4 @@
-const List = require('../../models/search/pet-list')
+const ListDb = require('../../models/pets/list')
 
 const search = ({ tag, pageNum, pageSize }) => {
   return new Promise((resolve, reject) => {
@@ -18,7 +18,7 @@ const search = ({ tag, pageNum, pageSize }) => {
       }
     })
     
-    List.count({ tag: eval("/" + tagReg + "/ig") }, (err, count) => {
+    ListDb.count({ tag: eval("/" + tagReg + "/ig") }, (err, count) => {
       totalCount = count
     })
 
@@ -27,14 +27,14 @@ const search = ({ tag, pageNum, pageSize }) => {
     }
 
     // 分页查询
-    List.find({ tag: eval("/" + tagReg + "/ig") }, {_id: 0})
+    ListDb.find({ tag: eval("/" + tagReg + "/ig") }, {_id: 0})
         .skip((pageNum - 1) * pageSize)
         .limit(pageSize)
         .sort({pid: 1})
         .lean()
-        .exec((err, List) => {
+        .exec((err, ListDb) => {
           if (err) return reject()
-          resolve({ List, lastPage })
+          resolve({ ListDb, lastPage })
         })
   })
 }
