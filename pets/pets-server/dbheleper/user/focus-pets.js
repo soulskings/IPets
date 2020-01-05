@@ -9,7 +9,6 @@ const findList = ({ openid, pageNum, pageSize}) => {
     focusListDb.find({ openid: openid }, {_id: 0})
       .lean()
       .exec((err, res) => {
-
         if (err) {
           return reject()
         }
