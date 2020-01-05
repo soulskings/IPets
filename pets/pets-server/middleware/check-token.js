@@ -16,6 +16,8 @@ const checkMiddleware = async (ctx, next) => {
         if (user.length === 0) return ctx.body = template.noLogin
       }
       await next()
+    } else {
+      await next()
     }
   } catch (err) {
     ctx.body = await template.netError
