@@ -20,15 +20,22 @@
 		components: {
 			cSwiper
 		},
-		props: {
-			list: {
-				type: Array,
-				default: () => []
-			}
-		},
 		data() {
 			return {
-				
+				list: [
+					{
+						id: 1,
+						url: '../../../../../static/images/8.jpg',
+						name: 'sdfs水电费水电费水电费水电费发',
+						dec: '描述'
+					},
+					{
+						id: 2,
+						name: '地方斯蒂芬',
+						url: '../../../../../static/images/8.jpg',
+						dec: 'sldfskdlfsldsldfskl绿山咖啡就考试了地方及时两地分居乐山大佛地方及时的方式来地方是登录父级老师的副驾驶两地分居萨菲罗斯'
+					}
+				],
 			};
 		},
 		methods: {

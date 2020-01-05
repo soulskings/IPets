@@ -20,7 +20,7 @@
 		font-size: 28rpx;
 	}
 	.page-padding {
-		padding: 0 20rpx;
+		padding: 0 30rpx;
 	}
 	.classification-type {
 		font-size: 40rpx;

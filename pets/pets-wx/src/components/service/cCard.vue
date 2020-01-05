@@ -1,9 +1,9 @@
 <template>
 	<view class="c-card" hover-class="none" hover-stop-propagation="false" @click = "cardClick">
-		<image class="card-img" :src="result.url" alt="" mode="widthFix">
+		<image class="card-img" :src="result[optionsDef['url']]" alt="" mode="widthFix">
 		<view class="card-content">
-			<text class="card-title">{{result.name}}</text>
-			<text class="card-dec">{{result.dec}}</text>
+			<text class="card-title">{{result[optionsDef['name']]}}</text>
+			<text class="card-dec">{{result[optionsDef['dec']]}}</text>
 			<button class="cancel-btn .btn" v-if="configDef.cencelCollectBtn" @click.stop = "cancelBtnClick">取消收藏</button>
 		</view>
 	</view>
@@ -47,12 +47,17 @@
 		methods: {
 			// 初始化数据
 			init() {
+				// 如果自定义需要显示的字段名称
 				this.options ? Object.keys(this.options).forEach((key) => {
 					this.optionsDef[key] = this.options[key];
 				}): '';
+				console.log(this.optionsDef)
 				Object.keys(this.optionsDef).forEach((key) => {
-					this.$set(this.result,key,this.dataObj[key])
-					// this.result[key] = this.dataObj[key];
+					if (!this.result[key]) {
+						this.$set(this.result, key, this.dataObj[key])
+					} else {
+						this.result[key] = this.dataObj[key];
+					}
 				})
 			},
 			// 点击触发事件
@@ -67,7 +72,7 @@
 				this.config ? Object.keys(this.config).forEach((key) => {
 					this.configDef[key] = this.config[key];
 				}): '';
-				return this.configDef && this.configDef.isItemData ? this.dataObj : this.result.id;
+				return (this.configDef && this.configDef.isItemData) ? this.dataObj : this.result.id;
 			},
 		}
 	}

@@ -1,5 +1,6 @@
 <template>
 	<view class="card-box">
+		<text class='classification-type' v-if="list.length > 0">文章精选</text>
 		<c-card class="card-item" v-for="(item,index) in list" :key="index" :dataObj='item' @click="cardClick"></c-card>
 	</view>
 </template>

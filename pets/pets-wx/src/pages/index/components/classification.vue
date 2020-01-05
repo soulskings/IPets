@@ -47,7 +47,7 @@
 			};
 		},
 		mounted() {
-			this.getList();
+			// this.getList();
 		},
 		methods: {
 			// 点击宠物跳转
@@ -85,10 +85,10 @@
 
 		.fication {
 			margin-bottom: 20rpx;
+			width: 50%;
 
 			.fication-img {
-				width: 350rpx;
-				height: 262.5rpx;
+				width: 100%;
 			}
 
 			.classification-name {
