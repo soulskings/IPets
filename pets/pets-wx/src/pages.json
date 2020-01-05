@@ -38,11 +38,15 @@
         }
         ,{
             "path" : "pages/petSearch/index",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "搜索结果"
+			}
         }
         ,{
             "path" : "pages/article/index",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "文章详情"
+			}
         }
     ],
 	"globalStyle": {
@@ -52,8 +56,8 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-		"color": "#444444",
-		"selectedColor": "#FF80AB",
+		"color": "#333",
+		"selectedColor": "#ff9d00",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [

@@ -1,6 +1,6 @@
 <template>
 	<view class="c-card" hover-class="none" hover-stop-propagation="false" @click = "cardClick">
-		<img class="card-img" :src="result.url" alt="">
+		<image class="card-img" :src="result.url" alt="" mode="widthFix">
 		<view class="card-content">
 			<text class="card-title">{{result.name}}</text>
 			<text class="card-dec">{{result.dec}}</text>
@@ -82,8 +82,7 @@
 	justify-content: center;
 	align-items: center;
 	.card-img{
-		width: 160rpx;
-		height: 120rpx;
+		width: 200rpx;
 		margin-right: 20rpx;
 	}
 	.card-content{
@@ -101,12 +100,13 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		line-height:32rpx;
+		margin-bottom: 20rpx;
 	}
 	.card-dec{
 		display: block;
 		margin-top: 10rpx;
 		color: $uni-text-color;
-		font-size: 30rpx;
+		font-size: 28rpx;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;

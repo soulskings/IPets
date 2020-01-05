@@ -15,7 +15,7 @@
 		},
 		methods: {
 			search() {
-				uni.navigateTo({
+				uni.redirectTo({
 					url: `/pages/petSearch/index`
 				})
 			}
@@ -25,6 +25,7 @@
 
 <style lang="scss">
 	.head{
+		margin-top: 10rpx;
 		display: flex;
 		justify-content: space-between;
 	}

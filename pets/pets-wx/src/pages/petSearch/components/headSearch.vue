@@ -1,16 +1,46 @@
 <template>
 	<view class="head">
-		<input class="search-input" type="text" v-model="searchVal" placeholder="搜索宠物攻略" @focus="search"/>
-		<button class="cancel-search">取消</button>
+		<input class="search-input" type="text" v-model="searchVal" placeholder="搜索宠物攻略" @blur="search"/>
+		<button class="cancel-search" @click="cancel">取消</button>
 	</view>
 </template>
 
 <script>
+	import {
+		requestGet
+	} from '@/utils/request.js'
+	import {
+		petsCateUrl
+	} from '@/utils/requesUrl.js'
+	import {
+		resCode
+	} from '@/utils/code.js'
+	import eventBus from '@/utils/eventBus.js' // 通过eventBus进行兄弟间通信
 	export default {
 		data() {
 			return {
-				
+				searchVal: '',
+				repData: {
+					name: ''
+				}
 			};
+		},
+		methods: {
+			/**
+			 * 输入框值传递
+			 * @param {Object} e
+			 */
+			search(e) {
+				this.repData.name = e.detail.value;
+				this.searchInputNameBus();
+			},
+			cancel() {
+				this.repData.name = this.searchVal = '';
+				this.searchInputNameBus();
+			},
+			searchInputNameBus() {
+				eventBus.$emit('searchInputName', this.repData)
+			}
 		}
 	}
 </script>
@@ -19,6 +49,7 @@
 	.head{
 		display: flex;
 		justify-content: space-between;
+		margin-top: 20rpx;
 	}
 	.cancel-search{
 		background-color: $uni-bg-color-grey;

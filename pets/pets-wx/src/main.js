@@ -5,12 +5,12 @@ import {
 	uniList,
 	uniListItem,
 	uniSegmentedControl,
-	uniTag
+	uniSwiperDot 
 } from "@dcloudio/uni-ui"
 Vue.component('uni-list',uniList)
 Vue.component('uni-list-item',uniListItem)
 Vue.component('uni-segmented-control',uniSegmentedControl)
-Vue.component('uni-tag',uniTag)
+Vue.component('uni-swiper-dot',uniSwiperDot )
 
 Vue.prototype.$store = store 
 Vue.config.productionTip = false
