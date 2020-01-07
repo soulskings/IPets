@@ -4,6 +4,7 @@ const listModel = {
     index: true
   },
   pid: String,
+  name: String,
   img_url: String,
   shape: String,
   purpose: String,

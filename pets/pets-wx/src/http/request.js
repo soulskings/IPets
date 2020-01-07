@@ -25,6 +25,7 @@
  *   }
  * })
  */
+import env from '@/http/env.js'
 import store from '@/store/index.js'
 const applyDataTemplate = (headers = {}) => {
     const template = {
@@ -36,12 +37,13 @@ const applyDataTemplate = (headers = {}) => {
 const request = (url, options = {}) => {
     const {
         method = 'POST',
+		baseUrl = env.baseUrl,
         exceptionHandle = {}
     } = options
 
     return new Promise((resolve, reject) => {
         uni.request({
-            url: url,
+            url: baseUrl + url,
             method: method,
             headers: options.headers ? options.headers : applyDataTemplate(),
             data: options.data,

@@ -1,5 +1,5 @@
 <template>
-	<view class="home" hover-class="none" hover-stop-propagation="false">
+	<view class="home page-padding" hover-class="none" hover-stop-propagation="false">
 	    <head-search></head-search>
 	    <classification></classification>
 	    <hot-pet></hot-pet>
@@ -33,7 +33,5 @@
 </script>
 
 <style>
-	.home {
-		padding: 0 20rpx;
-	}
+	
 </style>
