@@ -17,12 +17,7 @@
 </template>
 
 <script>
-	import {
-		requestPost
-	} from '@/utils/request.js'
-	import {
-		replaceToken
-	} from '@/utils/requesUrl.js'
+	import { replaceToken } from '@/http/index.js'
 	import { resCode } from '@/utils/code.js'
 	import {
 		mapActions,
@@ -70,7 +65,7 @@
 				const [err, success] = await uni.login();
 				
 				// 取值 this.$store.state.user
-				const [tokenErr, tokenSuccess] = await requestPost(replaceToken, {
+				const [tokenErr, tokenSuccess] = await replaceToken({
 					code: (success && success.code) || ''
 				})
 				console.log(tokenSuccess)

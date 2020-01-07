@@ -12,11 +12,8 @@
 
 <script>
 	import {
-		requestGet
-	} from '@/utils/request.js'
-	import {
-		petsCateUrl
-	} from '@/utils/requesUrl.js'
+		getPetsCate
+	} from '@/http/index.js'
 	import {
 		resCode
 	} from '@/utils/code.js'
@@ -61,7 +58,7 @@
 			async getList() {
 				// TODU 获取宠物类型列表接口
 				console.log('获取宠物类型列表接口')
-				const [resErr, resSuccess] = await requestGet(petsCateUrl);
+				const [resErr, resSuccess] = await getPetsCate();
 				if (resSuccess && resSuccess.code === resCode.SUCCESS) {
 					this.srcList = resSuccess && resSuccess.data;
 				} else if (resSuccess && resSuccess.code === resCode.ERROR) {

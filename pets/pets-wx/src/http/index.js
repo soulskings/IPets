@@ -21,8 +21,8 @@ export function petsQuit(data) {
 /**
  * 宠物种类列表接口
  */
-export function getPetsCate(data) {
-	return requestPost(requesUrl.petsCate, data);
+export function getPetsCate() {
+	return requestPost(requesUrl.petsCate);
 }
 /**
  * 全部宠物列表接口

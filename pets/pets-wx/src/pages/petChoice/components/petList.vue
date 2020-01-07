@@ -19,12 +19,6 @@
 
 <script>
 	import {
-		requestGet
-	} from '@/utils/request.js'
-	import {
-		petsCateUrl
-	} from '@/utils/requesUrl.js'
-	import {
 		resCode
 	} from '@/utils/code.js'
 	import eventBus from '@/utils/eventBus.js' // 通过eventBus进行兄弟间通信

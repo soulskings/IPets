@@ -9,11 +9,8 @@
 
 <script>
 	import {
-		requestGet
-	} from '@/utils/request.js'
-	import {
-		petsCateUrl
-	} from '@/utils/requesUrl.js'
+		getPetsCate
+	} from '@/http/index.js'
 	import {
 		resCode
 	} from '@/utils/code.js'
@@ -33,6 +30,9 @@
 				],
 			};
 		},
+		mounted() {
+			this.getData()
+		},
 		methods: {
 			// 种类切换方法
 			categoryClick(item) {
@@ -41,6 +41,11 @@
 					type: this.category
 				})
 			},
+			async getData() {
+				const [err, success] = await getPetsCate({
+					code: ''
+				})
+			}
 		}
 	}
 </script>
