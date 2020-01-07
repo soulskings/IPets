@@ -19,19 +19,14 @@
 
 <script>
 	import {
-		requestGet
-	} from '@/utils/request.js'
-	import {
-		petsCateUrl
-	} from '@/utils/requesUrl.js'
-	import {
 		resCode
 	} from '@/utils/code.js'
 	import eventBus from '@/utils/eventBus.js' // 通过eventBus进行兄弟间通信
+	import { pageConf } from '@/utils/constantConfig.js'
 	export default {
 		data() {
 			return {
-				hotPetsList: [{
+				hotPetsList: [{ // 热门宠物列表
 						pid: 0,
 						name: '十点多'
 					},
@@ -40,7 +35,7 @@
 						name: '十点多dsf'
 					}
 				],
-				allPetsList: [{
+				allPetsList: [{ // 所有宠物列表
 						pid: 0,
 						name: 'sdfsdf'
 					},
@@ -48,7 +43,11 @@
 						pid: 1,
 						name: '十点多胜多负少的'
 					}
-				]
+				],
+				paging: {
+					count: pageConf.count,
+					page: pageConf.page
+				}
 			};
 		},
 		created() {
@@ -75,6 +74,9 @@
 			 */
 			getHotData() {
 				// TODU热门宠物接口
+				let params = {id:1};
+				Object.assign(params, this.paging)
+				console.log(params)
 				console.log('热门宠物接口')
 			},
 			/**
