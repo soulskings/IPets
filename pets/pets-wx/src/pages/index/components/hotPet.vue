@@ -18,6 +18,7 @@
 <script>
 	import cTag from '@/components/common/cTag.vue'
 	import getColor from '@/utils/style.js'
+	import { getPetsList } from '@/http/index.js'
 	export default {
 		name: 'hot-pet',
 		components: {
@@ -58,6 +59,9 @@
 				]
 			};
 		},
+		mounted() {
+			this.getData();
+		},
 		methods: {
 			goDetail(item) {
 				uni.navigateTo({
@@ -67,8 +71,8 @@
 			/**
 			 * 获取热门宠物数据接口
 			 */
-			getData() {
-				
+			async getData() {
+				let data = await getPetsList({data: 1})
 			}
 		}
 	}
