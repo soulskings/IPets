@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "查看启动日志",
   "usingComponents": {
-    "head-search": "./components/head.wxml",
-    "classification": "./components/classification.wxml",
-    "hotPet": "./components/hotPet.wxml"
+    "headSearch": "./components/head",
+    "classification": "./components/classification",
+    "hotPet": "./components/hotPet"
   }
 }
