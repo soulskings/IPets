@@ -1,4 +1,4 @@
-//logs.js
+//index.js
 import create from '../../utils/create'
 import store from '../../store/index'
 
