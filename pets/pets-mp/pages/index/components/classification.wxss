@@ -1,0 +1,19 @@
+.classification-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.classification-box .fication {
+  margin-bottom: 20rpx;
+  width: 50%;
+}
+
+.classification-box .fication .fication-img {
+  width: 100%;
+}
+
+.classification-box .fication .classification-name {
+  display: block;
+  text-align: center;
+}
