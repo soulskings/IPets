@@ -2,5 +2,6 @@
 <view class="view-report">
   <view class="view">
     <banner></banner>
+    <strategy></strategy>
   </view>
 </view>
