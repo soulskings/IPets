@@ -1,2 +1,5 @@
 <!--pages/index/components/head.wxml-->
-<text>pages/index/components/head.wxml</text>
+<view class="head">
+    <image class="photo" src="../../../images/8.jpg" mode=""></image>
+    <input class="search-input" type="text" placeholder="搜索宠物攻略" bindfocus="search"/>
+</view>

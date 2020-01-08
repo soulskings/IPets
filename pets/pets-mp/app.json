@@ -3,8 +3,8 @@
     "pages/index/index",
     "pages/index-bak/index",
     "pages/index-with-data/index",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/user/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,5 +12,25 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#ff9d00",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "攻略",
+        "iconPath": "images/dish_tab_bar.png",
+        "selectedIconPath": "images/dish_tab_bar.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/mine_tab_bar.png",
+        "selectedIconPath": "images/mine_tab_bar.png"
+      }
+    ]
+  }
 }

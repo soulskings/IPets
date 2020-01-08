@@ -1,1 +1,18 @@
-/* pages/index/components/hotPet.wxss */
+.hot-pet .pet-box {
+  display: flex;
+  align-items: baseline;
+}
+
+.hot-pet .label-type {
+  font-size: 36rpx;
+}
+
+.hot-pet .label-box {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.hot-pet .label-box .item-name {
+  margin: 0 10rpx 20rpx;
+}

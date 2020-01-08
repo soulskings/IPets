@@ -1,0 +1,14 @@
+@import '../../wxss/wx.scss';
+
+.c-tag {
+    width: 100%;
+
+    .box {
+        display: inline-block;
+        padding: 10rpx 20rpx;
+        border-radius: 10rpx;
+        text-align: center;
+        border: 1rpx solid $uni-border-color;
+        color: $uni-text-color;
+    }
+}
