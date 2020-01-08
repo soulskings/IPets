@@ -1,0 +1,6 @@
+<!--pages/pet-detail/index.wxml-->
+<view class="view-report">
+  <view class="view">
+    <banner></banner>
+  </view>
+</view>

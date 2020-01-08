@@ -4,7 +4,8 @@
     "pages/index-bak/index",
     "pages/index-with-data/index",
     "pages/logs/logs",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/pet-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
