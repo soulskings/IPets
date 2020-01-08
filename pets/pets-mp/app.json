@@ -2,8 +2,8 @@
   "pages": [
     "pages/index-bak/index",
     "pages/index-with-data/index",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/pet-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
