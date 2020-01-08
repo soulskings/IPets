@@ -25,11 +25,10 @@
  *   }
  * })
  */
-import env from './http/env.js'
-import store from '@/store/index.js'
+import env from './env.js'
 const applyDataTemplate = (headers = {}) => {
     const template = {
-      token: store.state.user.token,
+      token: '',
       headers
     }
     return template // 服务端接受格式要求
