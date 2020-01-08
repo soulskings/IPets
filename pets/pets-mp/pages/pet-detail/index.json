@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "banner": "pages/pet-detail/components/banner"
+    "banner": "./components/banner"
   }
 }

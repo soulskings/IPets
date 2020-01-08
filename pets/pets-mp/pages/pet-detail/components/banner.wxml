@@ -1,4 +1,2 @@
 <!--pages/pet-detail/components/banner.wxml-->
-<view>
-  <text>pages/pet-detail/components/banner.wxml</text>
-</view>
+<text>pages/pet-detail/components/banner.wxml</text>
