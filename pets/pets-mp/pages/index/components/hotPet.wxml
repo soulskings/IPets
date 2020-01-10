@@ -7,8 +7,8 @@
             <!-- <text class="label-name" v-for="(sub, ind) in item" :key="ind" @click="goDetail(sub)">
                 {{sub.name}}
             </text> -->
-            <view class="item-name" wx:for="(sub, ind) in item" wx:key="ind" bindtap="goDetail">
-                <c-tag label="{{sub.id}}" value="{{sub.name}}" setStyle="{{setStyle}}"></c-tag>
+            <view class="item-name" wx:for="{{item}}" wx:key="index" bindtap="goDetail">
+                <c-tag label="{{item.id}}" value="{{item.name}}" setStyle="{{setStyle}}"></c-tag>
             </view>
         </view>
     </view>
