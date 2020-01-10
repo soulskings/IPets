@@ -1,1 +1,15 @@
 /* pages/pet-detail/components/banner.wxss */
+.banner {
+  padding: 20rpx 0;
+}
+
+.swiper-warp {
+  height: 390rpx;
+}
+
+.item-img {
+  width: 95%;
+  height: 390rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+}

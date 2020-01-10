@@ -1,0 +1,11 @@
+<!--pages/pet-detail/components/strategy.wxml-->
+<view class="strategy {{index !== 0 ? 'border' : ''}}">
+  <view class="title">
+    <text class="title-txt">宠物概况</text>
+  </view>
+  <view class="list">
+    <view wx:for="{{List}}" wx:key="*this" class="item">
+      <text class="item-txt">藏獒</text>
+    </view>
+  </view>
+</view>
