@@ -1,7 +1,7 @@
 <!--pages/pet-detail/components/banner.wxml-->
 <view class="banner">
   <swiper
-    previous-margin="40rpx"
+    previous-margin="28rpx"
     next-margin="40rpx"
     class="swiper-warp"
   >
