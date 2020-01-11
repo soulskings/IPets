@@ -1,8 +1,10 @@
 <!--pages/pet-detail/index.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml" />
 <view class="view-report">
-  <view class="view">
-    <view class="usermotto">
-      <text class="user-motto">{{$.motto}}-{{reverseMotto}}</text>
+  <view class="article-content">
+    <view class="article-title">
+      <text class="article-title-text">{{detail.title}}</text>
     </view>
+    <template is="wxParse" data="{{wxParseData:article_body.nodes}}" />
   </view>
 </view>

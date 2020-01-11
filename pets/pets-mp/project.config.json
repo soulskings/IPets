@@ -47,6 +47,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
@@ -55,6 +59,13 @@
 					"name": "pages/pet-detail/index",
 					"pathName": "pages/pet-detail/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/article/index",
+					"pathName": "pages/article/index",
+					"query": "article_id=077175e3b8246444c48&article_type=3",
 					"scene": null
 				}
 			]

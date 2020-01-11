@@ -11,9 +11,4 @@ create.Page(store, {
       return util.formatTime(new Date(log))
     })
   },
-  handleTest: function () {
-    wx.navigateTo({
-      url: '../pet-detail/index'
-    })
-  }
 })

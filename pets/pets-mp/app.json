@@ -5,7 +5,8 @@
     "pages/index-with-data/index",
     "pages/logs/logs",
     "pages/user/index",
-    "pages/pet-detail/index"
+    "pages/pet-detail/index",
+    "pages/article/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
