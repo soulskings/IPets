@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.fetchPetDetail()
+    this.fetchPetDetail(options.pid)
   },
 
   /**
@@ -66,9 +66,9 @@ Page({
   },
 
   // 请求宠物详情数据
-  fetchPetDetail () {
+  fetchPetDetail (pid) {
     getPetsDetailt({
-      pid: '0000'
+      pid: pid
     }).then((res) => {
       this.setData({
         detail: res

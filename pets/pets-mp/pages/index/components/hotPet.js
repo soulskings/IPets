@@ -52,7 +52,7 @@ Component({
     goDetail(item) {
       let pid = item.currentTarget.dataset.pid || '';
       wx.navigateTo({
-        url: `/pages/pet-detail/index?id=${pid}`
+        url: `/pages/pet-detail/index?pid=${pid}`
       })
     }
   }
