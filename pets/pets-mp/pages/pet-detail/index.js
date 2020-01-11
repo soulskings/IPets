@@ -6,8 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detail: {},
-    List: [1,2,3,4,5]
+    detail: {}
   },
 
   /**

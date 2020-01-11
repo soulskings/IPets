@@ -6,12 +6,12 @@
     class="swiper-warp"
   >
     <swiper-item
-      wx:for="{{[1,2,3]}}"
+      wx:for="{{imgArr}}"
       wx:key="*this"
     >
       <view>
         <cover-image 
-        src="https://www.9fpuhui.com/_nuxt/img/1ec786e.png"
+        src="{{item}}"
         class="item-img"
         />
       </view>
