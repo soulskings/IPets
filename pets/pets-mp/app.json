@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/user/index",
     "pages/pet-detail/index",
-    "pages/pet-choice/index"
+    "pages/pet-choice/index",
+    "pages/article/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

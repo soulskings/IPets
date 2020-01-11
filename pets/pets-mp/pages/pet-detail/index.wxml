@@ -2,10 +2,9 @@
 <view class="view-report">
   <view class="view">
     <banner imgArr="{{detail.imgArr}}"></banner>
-    <strategy
-      title="{{detail.name}}概况"
-      border="false"
-    ></strategy>
+    <attribute
+      detail="{{detail}}"
+    ></attribute>
     <strategy
       wx:if="{{detail.training_list.length !== 0}}"
       title="训练技巧"
@@ -38,10 +37,10 @@
       <text class="button-txt">收藏</text>
     </view>
     <view class="button">
-      <view class="wechat">
+      <button class="wechat" open-type="share">
         <image class="wechat-icon" src="./img/wechat-icon.png"/>
-        <text class="button-txt">分享</text>
-      </view>
+        <view class="button-txt" bindtap="shareMethod" >分享</view>
+      </button>
     </view>
   </view>
 </view>

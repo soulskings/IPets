@@ -1,11 +1,14 @@
 // pages/pet-detail/index.js
-import { getPetsDetailt } from '../../http/index'
+import { getPetsArticleDetail } from '../../http/index'
+import WxParse from '../../utils/wxParse/wxParse.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    article_body: '',
     detail: {}
   },
 
@@ -13,14 +16,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.fetchPetDetail()
+    let {article_id: articleId, article_type: articleType} = options
+    this.fetchArticleData({
+      articleId,
+      articleType
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -66,23 +73,13 @@ Page({
   },
 
   // 请求宠物详情数据
-  fetchPetDetail () {
-    getPetsDetailt({
-      pid: '0000'
-    }).then((res) => {
+  fetchArticleData (data) {
+    return getPetsArticleDetail(data).then((res) => {
       this.setData({
-        detail: res
+        detail: res[0],
+        article_body: res[0].article_body
       })
-      wx.setNavigationBarTitle({
-        title: res.name
-      })
-    })
-  },
-
-  // 微信分享
-  shareMethod () {
-    wx.showShareMenu({
-      withShareTicket: true
+      WxParse.wxParse('article_body', 'html', res[0].article_body, this, 5); 
     })
   }
 })
