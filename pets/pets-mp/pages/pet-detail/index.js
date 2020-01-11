@@ -20,7 +20,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -73,6 +73,16 @@ Page({
       this.setData({
         detail: res
       })
+      wx.setNavigationBarTitle({
+        title: res.name
+      })
+    })
+  },
+
+  // 微信分享
+  shareMethod () {
+    wx.showShareMenu({
+      withShareTicket: true
     })
   }
 })

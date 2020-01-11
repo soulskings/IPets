@@ -6,7 +6,9 @@ import {
   resCode
 } from '../../../utils/code.js'
 Component({
-
+  options: {
+    styleIsolation: 'apply-shared'
+  },
   /**
    * 页面的初始数据
    */

@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.3",
+	"libVersion": "2.10.0",
 	"appid": "wx6b04437c087fc326",
 	"projectname": "pets-mp",
 	"debugOptions": {
