@@ -1,0 +1,8 @@
+<!--pages/pet-detail/index.wxml-->
+<view class="view-report">
+  <view class="view">
+    <view class="usermotto">
+      <text class="user-motto">{{$.motto}}-{{reverseMotto}}</text>
+    </view>
+  </view>
+</view>

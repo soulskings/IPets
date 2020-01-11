@@ -10,5 +10,10 @@ create.Page(store, {
     this.store.data.logs = (wx.getStorageSync('logs') || []).map(log => {
       return util.formatTime(new Date(log))
     })
+  },
+  handleTest: function () {
+    wx.navigateTo({
+      url: '../pet-detail/index'
+    })
   }
 })
