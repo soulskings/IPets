@@ -1,6 +1,6 @@
 <!--components/common/c-tag.wxml-->
 <view class="c-tag">
-		<view class="box tag-expand">
-			<text>{{value}}</text>
-		</view>
+	<view class="box tag-expand">
+		<text>{{value}}</text>
 	</view>
+</view>

@@ -1,3 +1,7 @@
+.classification {
+  padding: 0 40rpx;
+}
+
 .classification-box {
   display: flex;
   flex-wrap: wrap;
@@ -6,11 +10,12 @@
 
 .classification-box .fication {
   margin-bottom: 20rpx;
-  width: 50%;
+  width: calc(50% - 5rpx);
 }
 
 .classification-box .fication .fication-img {
   width: 100%;
+  border-radius: 16rpx;
 }
 
 .classification-box .fication .classification-name {

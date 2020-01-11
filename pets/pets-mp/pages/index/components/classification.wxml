@@ -2,8 +2,8 @@
 <view class="classification" hover-class="none" hover-stop-propagation="false" wx:if="srcList && srcList.length > 0">
     <text class='classification-type'>宠物分类</text>
     <view class="classification-box">
-        <view class="fication" wx:for="{{srcList}}" wx:key="index" bindtap="petClick">
-            <image class="fication-img" src="{{item.img}}" mode="widthFix" />
+        <view class="fication" wx:for="{{srcList}}" wx:key="index" data-cid="item.cid" bindtap="petClick">
+            <image class="fication-img" src="{{item.img==''?errorUrl:item.img}}" binderror="errorFn" data-index="{{index}}" mode="widthFix" />
             <text class='classification-name'>{{item.name}}</text>
         </view>
     </view>

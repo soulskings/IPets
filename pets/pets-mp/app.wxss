@@ -1,16 +1,4 @@
 /**app.wxss**/
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 200rpx 0;
-    box-sizing: border-box;
-} 
-.page-padding {
-		padding: 0 30rpx;
-}
 .classification-type {
     font-size: 40rpx;
     color: #333;
@@ -18,17 +6,6 @@
     height: 80rpx;
     line-height: 80rpx;
     font-weight: 500;
-}
-.search-input{
-    display: inline-block;
-    width: calc(100% - 152rpx);
-    text-align: center;
-    padding: 19rpx 0;
-    border:1rpx solid #c8c7cc;
-    border-radius: 10rpx;
-}
-.main-color{
-    background-color: #ff9d00
 }
 .btn{
     min-width: 120rpx;

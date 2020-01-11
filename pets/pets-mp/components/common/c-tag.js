@@ -44,27 +44,4 @@ Component({
   data: {
 
   },
-  pageLifetimes: {
-    show() {
-      // 页面被展示
-    //   console.log(this.data.dataObj)
-      console.log(this.data.label)
-    },
-    hide: function() {
-      // 页面被隐藏
-      console.log('hide')
-    },
-    resize: function(size) {
-      // 页面尺寸变化
-      console.log('size')
-    }
-},
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-    tagClick() {
-      this.triggerEvent('click', this.label)
-    }
-  }
 })

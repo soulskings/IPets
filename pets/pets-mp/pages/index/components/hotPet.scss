@@ -1,4 +1,5 @@
 .hot-pet {
+    padding: 0 40rpx;
     .pet-box {
         display: flex;
         align-items: baseline;
@@ -18,5 +19,6 @@
     .c-tag {
         background-color: #ff9d00; 
         color: #fff; 
+        border-color: #ff9d00;
     }
 }
