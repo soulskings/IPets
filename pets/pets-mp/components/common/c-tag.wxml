@@ -1,6 +1,6 @@
 <!--components/common/c-tag.wxml-->
 <view class="c-tag">
-		<view class="box" style="{'background-color': setStyle.bgColor,'color': setStyle.color,'border-color': setStyle.bgColor}" bindtap="tagClick">
+		<view class="box tag-expand">
 			<text>{{value}}</text>
 		</view>
 	</view>
