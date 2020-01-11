@@ -41,7 +41,7 @@ const request = (url, options = {}) => {
     } = options
 
     return new Promise((resolve, reject) => {
-        uni.request({
+        wx.request({
             url: baseUrl + url,
             method: method,
             headers: options.headers ? options.headers : applyDataTemplate(),
@@ -49,18 +49,18 @@ const request = (url, options = {}) => {
             success: function(data) {
                 const code = data.data.code
                 const isSkippedCode = exceptionHandle === 'skip' || exceptionHandle[code] === 'skip'
-                if (code === '000000') {
+                if (code === '0000') {
                     resolve(data.data.data)
                 } else {
                     if (!isSkippedCode) {
                        // 公用逻辑：比如鉴权跳转
-                        if (data.data.code === '000001' || data.data.code === '000002') {
+                        if (data.data.code === '0001' || data.data.code === '0002') {
                             // 跳转登录页
                         }
                     }
                     if (exceptionHandle === 'skip') {
                     } else if (~Object.keys(exceptionHandle).indexOf(code.toString())) {
-                        if (data.data.code === '000001' || data.data.code === '000002') {
+                        if (data.data.code === '0001' || data.data.code === '0002') {
                             // 跳转登录页
                         }
                     }
@@ -87,7 +87,7 @@ const to = (promise) => {
 function requestPost (url, data, options = {}) {
     options.method = 'POST'
     options.data = data
-    return to(request(url, options))
+    return request(url, options)
 }
 
 /**
@@ -97,7 +97,7 @@ function requestPost (url, data, options = {}) {
 function requestGet(url, data, options = {}) {
     options.method = 'GET'
     options.data = data
-    return to(request(url, options))
+    return request(url, options)
 }
 
 module.exports = {

@@ -1,1 +1,87 @@
 /* pages/pet-detail/index.wxss */
+@keyframes icon-bounce {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  3% {
+    transform: rotate(8deg);
+  }
+
+  6% {
+    transform: rotate(-8deg);
+  }
+
+  9% {
+    transform: rotate(5deg);
+  }
+
+  10% {
+    transform: rotate(-5deg);
+  }
+
+  12% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.view {
+  padding-bottom: 100rpx;
+}
+
+.buttion-warp {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  box-shadow: 2rpx 0rpx 28rpx -10rpx #333333;
+  background: #fff;
+}
+
+.buttion-warp::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3rpx;
+  height: 46rpx;
+  background: #66666646;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.button-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.button-txt {
+  font-size: 30rpx;
+  padding: 0 12rpx;
+  padding-top: 2rpx;
+}
+
+.wechat {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  border-radius: 30rpx;
+  color: #fff;
+  background: #24DB5A;
+  animation: icon-bounce 2.5s infinite alternate;
+}
+
+.wechat-icon {
+  width: 40rpx;
+  height: 40rpx;
+}

@@ -1,2 +1,20 @@
 <!--pages/pet-detail/components/banner.wxml-->
-<text>pages/pet-detail/components/banner.wxml</text>
+<view class="banner">
+  <swiper
+    previous-margin="28rpx"
+    next-margin="40rpx"
+    class="swiper-warp"
+  >
+    <swiper-item
+      wx:for="{{imgArr}}"
+      wx:key="*this"
+    >
+      <view>
+        <cover-image 
+        src="{{item}}"
+        class="item-img"
+        />
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
