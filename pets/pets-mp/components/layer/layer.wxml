@@ -1,0 +1,10 @@
+<!--components/layer/layer.wxml-->
+<view class="layer" animation="{{animationData}}">
+  <view>
+    <view class="title">{{title}}</view>
+    <view class="content">{{content}}</view>
+  </view>
+  <view class="close-button">
+    <image class="close-icon" src="./img/close-icon.png" bindtap="closeMethod"/>
+  </view>
+</view>

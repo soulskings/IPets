@@ -1,0 +1,72 @@
+/* pages/pet-detail/components/attribute.js.wxss */
+.attribute {
+  padding: 20rpx 40rpx;
+}
+
+.title {
+  padding-bottom: 30rpx;
+}
+
+.title-txt {
+  font-size: 35rpx;
+  font-weight: 500;
+}
+
+.describe {
+  position: relative;
+  font-weight: 400;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  color: #999;
+  overflow: hidden;
+}
+
+.hide {
+  height: 70rpx;
+}
+
+.icon-warp {
+  position: absolute;
+  right: 0;
+  width: 70px;
+  text-align: right;
+  color: #333;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 26%,rgba(255,255,255,1)32%,rgba(255,255,255,1) 34%,rgba(255,255,255,1) 100%)
+}
+
+.icon-hide {
+  top: 40rpx;
+}
+
+.icon-show {
+  bottom: 0rpx;
+}
+
+.show-icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.icon-up {
+  transform: rotate(180deg);
+}
+
+.attr-list {
+  padding: 20rpx 0 0;
+}
+
+.attr-item {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.show-style {
+  text-align: center;
+  font-size: 26rpx;
+  color: #30a2f2;
+}
+
+.check {
+  color: #30a2f2;
+}

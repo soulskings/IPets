@@ -2,10 +2,9 @@
 <view class="view-report">
   <view class="view">
     <banner imgArr="{{detail.imgArr}}"></banner>
-    <strategy
-      title="{{detail.name}}概况"
-      border="false"
-    ></strategy>
+    <attribute
+      detail="{{detail}}"
+    ></attribute>
     <strategy
       wx:if="{{detail.training_list.length !== 0}}"
       title="训练技巧"
