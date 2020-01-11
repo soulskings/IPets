@@ -77,5 +77,12 @@ Page({
         title: res.name
       })
     })
+  },
+
+  // 微信分享
+  shareMethod () {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   }
 })
