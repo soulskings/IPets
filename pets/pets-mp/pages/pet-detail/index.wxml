@@ -1,6 +1,23 @@
 <!--pages/pet-detail/index.wxml-->
 <view class="view-report">
   <view class="view">
-    123
+    <banner></banner>
+    <strategy 
+      wx:for="{{List}}" 
+      wx:key="*this"
+      index="{{index}}"
+    ></strategy>
+  </view>
+  <view class="buttion-warp">
+    <view class="button">
+      <image class="button-icon" src="./img/collection-icon.png"/>
+      <text class="button-txt">收藏</text>
+    </view>
+    <view class="button">
+      <view class="wechat">
+        <image class="wechat-icon" src="./img/wechat-icon.png"/>
+        <text class="button-txt">分享</text>
+      </view>
+    </view>
   </view>
 </view>
