@@ -1,6 +1,8 @@
 // pages/index/components/hotPet.js
 Component({
-
+  options: {
+    styleIsolation: 'apply-shared'
+  },
   /**
    * 页面的初始数据
    */

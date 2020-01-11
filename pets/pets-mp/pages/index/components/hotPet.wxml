@@ -8,7 +8,7 @@
                 {{sub.name}}
             </text> -->
             <view class="item-name" wx:for="{{item}}" wx:key="index" bindtap="goDetail">
-                <c-tag label="{{item.id}}" value="{{item.name}}" setStyle="{{setStyle}}"></c-tag>
+                <c-tag tag-expand="c-tag" label="{{item.id}}" value="{{item.name}}" setStyle="{{setStyle}}"></c-tag>
             </view>
         </view>
     </view>
