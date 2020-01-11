@@ -65,7 +65,7 @@
   >
     {{ showAll ? '收起' : '全部'}}
   </view>
-  <layer 
+  <layer
     wx:if="{{showLayer}}"
     title="{{layerTitle}}"
     content="{{layerContent}}"

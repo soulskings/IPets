@@ -37,10 +37,10 @@
       <text class="button-txt">收藏</text>
     </view>
     <view class="button">
-      <view class="wechat">
+      <button class="wechat" open-type="share">
         <image class="wechat-icon" src="./img/wechat-icon.png"/>
-        <text class="button-txt">分享</text>
-      </view>
+        <view class="button-txt" bindtap="shareMethod" >分享</view>
+      </button>
     </view>
   </view>
 </view>

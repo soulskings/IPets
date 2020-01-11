@@ -21,7 +21,7 @@ Component({
     animationData: {}
   },
 
-  attached () {
+  ready () {
     const animation = wx.createAnimation({
       duration: 200,
       timingFunction: 'ease'

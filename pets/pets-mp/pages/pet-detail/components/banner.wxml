@@ -10,10 +10,10 @@
       wx:key="*this"
     >
       <view>
-        <cover-image 
+        <image 
         src="{{item}}"
         class="item-img"
-        />
+        ></image>
       </view>
     </swiper-item>
   </swiper>

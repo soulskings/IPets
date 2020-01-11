@@ -68,5 +68,6 @@
 }
 
 .check {
+  margin-left: 20rpx;
   color: #30a2f2;
 }
