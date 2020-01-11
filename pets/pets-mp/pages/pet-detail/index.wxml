@@ -1,11 +1,35 @@
 <!--pages/pet-detail/index.wxml-->
 <view class="view-report">
   <view class="view">
-    <banner></banner>
-    <strategy 
-      wx:for="{{List}}" 
-      wx:key="*this"
-      index="{{index}}"
+    <banner imgArr="{{detail.imgArr}}"></banner>
+    <strategy
+      title="{{detail.name}}概况"
+      border="false"
+    ></strategy>
+    <strategy
+      wx:if="{{detail.training_list.length !== 0}}"
+      title="训练技巧"
+      List="{{detail.training_list}}"
+    ></strategy>
+    <strategy
+      wx:if="{{detail.feeding_list.length !== 0}}"
+      title="喂养技巧"
+      List="{{detail.feeding_list}}"
+    ></strategy>
+    <strategy
+      wx:if="{{detail.choose_list.length !== 0}}"
+      title="挑选技巧"
+      List="{{detail.choose_list}}"
+    ></strategy>
+    <strategy
+      wx:if="{{detail.fad_list.length !== 0}}"
+      title="常见疾病"
+      List="{{detail.fad_list}}"
+    ></strategy>
+    <strategy
+      wx:if="{{detail.new_list.length !== 0}}"
+      title="新手必读"
+      List="{{detail.new_list}}"
     ></strategy>
   </view>
   <view class="buttion-warp">

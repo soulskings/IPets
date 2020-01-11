@@ -4,9 +4,17 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    index: {
-      type: Number,
-      value: 0
+    title: {
+      type: String,
+      value: ''
+    },
+    border: {
+      type: String,
+      value: "true"
+    },
+    List: {
+      type: Array,
+      value: []
     }
   },
 
@@ -14,7 +22,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-    List: [1,2,3,4,5,6,7]
   },
 
   /**
