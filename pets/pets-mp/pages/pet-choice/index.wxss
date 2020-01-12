@@ -1,15 +1,20 @@
 /* pages/pet-choice/index.wxss */
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 88rpx;
+.search-warp {
   border-bottom: 1px solid #f3f5f7;
 }
 
-.input {
+.search {
   position: relative;
-  width: 600rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 660rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.input {
+  width: 660rpx;
   height: 60rpx;
   border-radius: 30rpx;
   padding-left: 90rpx;
@@ -21,7 +26,16 @@
   position: absolute;
   width: 30rpx;
   height: 30rpx;
-  left: 70rpx;
+  left: 30rpx;
   top: 28rpx;
   z-index: 2;
+}
+
+.cancle {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 25rpx;
+  margin-left: 25rpx;
 }

@@ -1,8 +1,19 @@
 <!--pages/pet-choice/index.wxml-->
 <view class="view-report">
-  <view class="search">
-    <image class="search-icon" src="./img/search.png" />
-    <input class="input" placeholder="搜索宠物"/>
+  <view class="search-warp">
+    <view class="search">
+      <image class="search-icon" src="./img/search.png" />
+      <input
+        class="input"
+        placeholder="搜索宠物"
+        bindfocus="showSearch"
+        bindblur="cancle"
+      />
+      <view
+        class="cancle"
+        bindtap="cancle"
+      >取消</view>
+    </view>
   </view>
   <view class="columns">
     <nav actIndex="{{actIndex}}" bindswitchMethod = "switchMethod"></nav>

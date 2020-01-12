@@ -13,7 +13,8 @@ Page({
     page: 0,
     loadmore: false,
     total: 0,
-    lastPage: false
+    lastPage: false,
+    showSearch: false
   },
 
   /**
@@ -138,6 +139,23 @@ Page({
           lastPage: true
         })
       }
+    })
+  },
+
+  /**
+   * 展示搜索框
+   */
+  showSearch () {
+    this.setData({
+      showSearch: true
+    })
+  },
+  /**
+   * 取消搜索框
+   */
+  cancle () {
+    this.setData({
+      showSearch: false
     })
   }
 })
