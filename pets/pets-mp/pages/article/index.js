@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let {article_id: articleId, article_type: articleType} = options
+    let { articleId, articleType } = options
     this.fetchArticleData({
       articleId,
       articleType

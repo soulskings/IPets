@@ -28,5 +28,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    goArticleMethod (e) {
+      let { articleid, articletype } = e.currentTarget.dataset
+      wx.navigateTo({
+        url: `/pages/article/index?articleId=${articleid}&articleType=${articletype}`
+      })
+    }
   }
 })
