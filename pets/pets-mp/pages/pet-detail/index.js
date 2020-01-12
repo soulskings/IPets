@@ -1,5 +1,5 @@
 // pages/pet-detail/index.js
-import { getPetsDetailt, getPetsPetcheck, getPetsFocus } from '../../http/index'
+import { getPetsDetailt, getPetsPetcheck, getPetsFocus, getPetsCanclefocus } from '../../http/index'
 Page({
 
   /**
@@ -134,6 +134,21 @@ Page({
         }
         this.setData({
           collectionStatus: true
+        })
+      })
+    } else {
+      // 取消收藏
+      getPetsCanclefocus({
+        type: '1',
+        pid
+      }).then(res => {
+        wx.showToast({
+          title: '取消收藏',
+          duration: 1000,
+          mask: true
+        })
+        this.setData({
+          collectionStatus: false
         })
       })
     }
