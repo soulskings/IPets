@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "userHead" : "./components/userHead",
+    "userBody" : "./components/userBody"
+  }
 }

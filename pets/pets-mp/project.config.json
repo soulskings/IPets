@@ -80,7 +80,13 @@
 					"id": -1,
 					"name": "pages/my-collections/index",
 					"pathName": "pages/my-collections/index",
-					"query": "article_id=077175e3b8246444c48&article_type=3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/index",
+					"pathName": "pages/user/index",
 					"scene": null
 				}
 			]
