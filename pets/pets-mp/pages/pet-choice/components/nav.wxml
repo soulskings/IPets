@@ -1,0 +1,11 @@
+<!--pages/pet-choice/components/nav.wxml-->
+<view class="nav">
+  <view 
+    class="nav-item {{index === actIndex ? 'nav-act' : ''}}" 
+    wx:for="{{tab}}"
+    wx:key="*this"
+    data-index="{{index}}"
+    data-cid="{{item.cid}}"
+    bindtap="swich"
+  >{{item.name}}</view>
+</view>

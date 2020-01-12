@@ -1,0 +1,16 @@
+<!--pages/pet-choice/components/list.wxml-->
+<view class="list">
+  <view class="title">狗</view>
+  <view class="pet-list">
+    <view 
+      wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14]}}"
+      wx:key="*this"
+      class="item"
+    >
+      <image class="pet-img" src="http://www.ichong123.com/uploads/2014/08/z2.jpg"/>
+      <view class="item-txt">
+        藏獒
+      </view>
+    </view>
+  </view>
+</view>

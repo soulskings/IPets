@@ -1,0 +1,41 @@
+/* pages/pet-choice/components/list.wxss */
+.list {
+  position: absolute;
+  left: 160rpx;
+  top: 90rpx;
+  bottom: 0;
+  width: calc(100% - 160rpx);
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.title {
+  padding-top:20rpx;
+  padding-bottom: 50rpx;
+}
+
+.pet-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 30%;
+  margin-left: 15rpx;
+}
+
+.pet-img {
+  width: 170rpx;
+  height: 170rpx;
+}
+
+.item-txt {
+  text-align: center;
+  font-weight: 300;
+  font-size: 26rpx;
+  padding-bottom: 50rpx;
+  color: #333;
+}

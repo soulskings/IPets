@@ -1,18 +1,21 @@
 // pages/pet-choice/index.js
+import { getPetsList } from '../../http/index'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    actIndex: 0,
+    cid: '0'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.fetchList()
   },
 
   /**
@@ -62,5 +65,28 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * tab切换
+   */
+  switchMethod (e) {
+    this.setData({
+      cid: e.detail.cid,
+      actIndex: e.detail.actIndex
+    })
+  },
+
+  /**
+   * 请求宠物列表
+   */
+  fetchList () {
+    getPetsList({
+      cid: this.data.cid,
+      count: 20,
+      page: 0
+    }).then(res => {
+      console.log(res)
+    })
   }
 })

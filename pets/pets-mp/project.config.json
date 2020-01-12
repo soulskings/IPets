@@ -75,6 +75,13 @@
 					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pet-choice/index",
+					"pathName": "pages/pet-choice/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
