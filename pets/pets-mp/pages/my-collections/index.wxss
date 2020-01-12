@@ -1,0 +1,41 @@
+/* pages/pet-choice/index.wxss */
+
+
+.collention-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.collention-title, .collention-title-text{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.collention-title-text{
+    text-align: center;
+    font-size: 40rpx;
+}
+
+.collention-table{
+    width: 100%;
+}
+
+.collention-tab{
+    width: 100%;
+    height: 100rpx;
+}
+.collention-tab-item{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.collention-content{
+    width: 100%;
+    min-height: 500rpx;
+}
+
+.collention-content-item{
+    width: 100%;
+}

@@ -30,10 +30,6 @@ const petListController = async (ctx, next) => {
                     message: ''
                 })
             }else{
-                new tokenDb().save({
-                    user,
-                    token: Token
-                })
                 total = res.length;
                 data = res.slice(page * count, (page + 1) * count)
                 resolve()

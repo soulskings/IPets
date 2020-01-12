@@ -7,7 +7,8 @@
     "pages/user/index",
     "pages/pet-detail/index",
     "pages/pet-choice/index",
-    "pages/article/index"
+    "pages/article/index",
+    "pages/my-collections/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

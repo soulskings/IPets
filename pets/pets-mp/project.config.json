@@ -78,6 +78,13 @@
 				},
 				{
 					"id": -1,
+					"name": "pages/my-collections/index",
+					"pathName": "pages/my-collections/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
 					"name": "pages/user/index",
 					"pathName": "pages/user/index",
 					"query": "",
