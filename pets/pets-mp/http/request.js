@@ -28,7 +28,8 @@
 import env from './env.js'
 const applyDataTemplate = (headers = {}) => {
     const template = {
-      token: '',
+      token: wx.getStorageSync('token'),
+      openid: wx.getStorageSync('openid'),
       headers
     }
     return template // 服务端接受格式要求
@@ -41,12 +42,17 @@ const request = (url, options = {}) => {
     } = options
 
     return new Promise((resolve, reject) => {
+        wx.showLoading({
+            title: '加载中...',
+            mask: true
+        })
         wx.request({
             url: baseUrl + url,
             method: method,
-            headers: options.headers ? options.headers : applyDataTemplate(),
+            header: options.headers ? options.headers : applyDataTemplate(),
             data: options.data,
             success: function(data) {
+                wx.hideLoading()
                 const code = data.data.code
                 const isSkippedCode = exceptionHandle === 'skip' || exceptionHandle[code] === 'skip'
                 if (code === '0000') {
@@ -68,9 +74,19 @@ const request = (url, options = {}) => {
                 }
             },
             fail: function(err) {
+                if (!isSkippedCode) {
+                    wx.showToast({
+                        title: err.message
+                    })
+                    setTimeout(() => {
+                        wx.hideToast()
+                    }, 500)
+                }
+                wx.hideLoading()
                 reject(err)
             },
             complete: function() {
+                wx.hideLoading()
             }
         })
     })

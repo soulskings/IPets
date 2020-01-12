@@ -90,3 +90,14 @@ export function getPetsFocus(data) {
 export function getPetsCanclefocus(data) {
 	return requestPost(requesUrl.petsCanclefocus, data);
 }
+
+/**
+ * 查询宠物收藏状态
+ */
+export function getPetsPetcheck(data) {
+	return requestPost(requesUrl.petsPetcheck, data, {
+		exceptionHandle: {
+			'0001': 'skip'
+		}
+	});
+}

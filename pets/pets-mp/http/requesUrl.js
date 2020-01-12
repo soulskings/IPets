@@ -58,7 +58,11 @@ let requesUrl = {
 	/**
 	 * 取消收藏接口
 	 */
-	petsCanclefocus : 'pets/canclefocus'
+	petsCanclefocus : 'pets/canclefocus',
+	/**
+	 * 查询宠物收藏状态
+	 */
+  petsPetcheck : 'pets/petcheck'
 }
 
 export default requesUrl;

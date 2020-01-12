@@ -26,12 +26,15 @@ Component({
       duration: 200,
       timingFunction: 'ease'
     })
-    this.animation = animation
-    animation.opacity(1).step()
-    animation.scale(1, 1).step()
-    this.setData({
-      animationData:animation.export()
-    })
+    // 延时执行动画,animation创建为异步
+    setTimeout(() => {
+      this.animation = animation
+      animation.opacity(1).step()
+      animation.scale(1, 1).step()
+      this.setData({
+        animationData:animation.export()
+      })
+    }, 20)
   },
 
   /**

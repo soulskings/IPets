@@ -32,9 +32,14 @@
     ></strategy>
   </view>
   <view class="buttion-warp">
-    <view class="button">
-      <image class="button-icon" src="./img/collection-icon.png"/>
-      <text class="button-txt">收藏</text>
+    <view class="button" bindtap="collectionMethod">
+      <image
+        class="button-icon" 
+        src="./img/{{collectionStatus ? 'collection-act' : 'collection-icon'}}.png"
+      />
+      <text 
+        class="button-txt {{collectionStatus ? 'col-act' : ''}}"
+      >{{collectionStatus ? '已收藏' : '收藏'}}</text>
     </view>
     <view class="button">
       <button class="wechat" open-type="share">

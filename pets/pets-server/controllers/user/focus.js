@@ -16,7 +16,7 @@ const focusController = async (ctx, next) => {
     throw new CustomError(template.paramsError)
   }
   // type: 1收藏宠物 2收藏文章
-  if (type == 1 && pid) {
+  if (type === '1' && pid) {
     // 查询宠物列表库中收藏宠物的信息
     const pet = await queryPet(pid)
     const { cid, name, img_url, tag } = pet
