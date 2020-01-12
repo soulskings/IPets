@@ -82,7 +82,11 @@ export function getPetsFocusarticle(data) {
  * 收藏接口
  */
 export function getPetsFocus(data) {
-	return requestPost(requesUrl.petsFocus, data);
+	return requestPost(requesUrl.petsFocus, data, {
+		// exceptionHandle: {
+		// 	'0001': 'skip'
+		// }
+	});
 }
 /**
  * 取消收藏接口
