@@ -1,0 +1,24 @@
+<!--pages/pet-choice/index.wxml-->
+<view class="collention-wrapper">
+    <view class="collention-title">
+        <text class="collention-title-text">我的收藏</text>
+    </view>
+    <view class="collention-table">
+        <view class="collention-tab">
+            <view class="collention-tab-item collention-tab-1">
+                <text bindtap="handleClickTab" id="tab-item0" class="collention-title-text">收藏文章</text>
+            </view>
+            <view class="collention-tab-item collention-tab-2">
+                <text bindtap="handleClickTab" id="tab-item1" class="collention-title-text">宠物</text>
+            </view>
+        </view>
+        <view class="collention-content">
+            <view wx:if="{{activetype == 0}}" class="collention-content-item collention-content-1">
+                page0
+            </view>
+            <view wx:if="{{activetype == 1}}" class="collention-content-item collention-content-2">
+                page1
+            </view>
+        </view>
+    </view>
+</view>
