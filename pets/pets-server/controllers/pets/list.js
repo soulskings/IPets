@@ -38,8 +38,10 @@ const petListController = async (ctx, next) => {
     })
         
     ctx.body = {
-        data,
-        total,
+        data: {
+            data,
+            total
+        },
         code: resCode.SUCCESS,
     }
 }

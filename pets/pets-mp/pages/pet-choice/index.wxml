@@ -6,6 +6,12 @@
   </view>
   <view class="columns">
     <nav actIndex="{{actIndex}}" bindswitchMethod = "switchMethod"></nav>
-    <list></list>
+    <list 
+      list="{{petList}}" 
+      cid="{{cid}}" 
+      loadmore="{{loadmore}}"
+      lastpage="{{lastPage}}"
+      bindloadEvent="loadMethod"
+    ></list>
   </view>
 </view>

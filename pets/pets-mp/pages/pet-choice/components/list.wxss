@@ -7,8 +7,6 @@
   width: calc(100% - 160rpx);
   padding-left: 10rpx;
   box-sizing: border-box;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .title {
@@ -38,4 +36,11 @@
   font-size: 26rpx;
   padding-bottom: 50rpx;
   color: #333;
+}
+
+.no-more {
+  color: #888;
+  font-size: 26rpx;
+  padding: 10rpx;
+  text-align: center;
 }

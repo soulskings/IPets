@@ -8,14 +8,19 @@ Page({
    */
   data: {
     actIndex: 0,
-    cid: '0'
+    cid: '0',
+    petList: [],
+    page: 0,
+    loadmore: false,
+    total: 0,
+    lastPage: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.fetchList()
+    this.fetchList(0)
   },
 
   /**
@@ -71,22 +76,68 @@ Page({
    * tab切换
    */
   switchMethod (e) {
-    this.setData({
-      cid: e.detail.cid,
-      actIndex: e.detail.actIndex
-    })
+    if (e.detail.actIndex !== this.data.actIndex) {
+      this.setData({
+        cid: e.detail.cid,
+        actIndex: e.detail.actIndex
+      })
+      this.fetchList(0)
+    }
   },
 
   /**
    * 请求宠物列表
    */
-  fetchList () {
+  fetchList (page) {
+    this.setData({
+      page: 0,
+      lastPage: false
+    })
     getPetsList({
       cid: this.data.cid,
       count: 20,
-      page: 0
-    }).then(res => {
-      console.log(res)
+      page: page
+    }, true).then(res => {
+      if (res.data.length === res.total) {
+        this.setData({
+          lastPage: true
+        })
+      }
+      this.setData({
+        petList: res.data,
+        total: res.total,
+        page: this.data.page + 1
+      })
+    })
+  },
+  /**
+   * 加载更多
+   */
+  loadMethod () {
+    if (this.data.lastPage) {
+      return
+    }
+    this.setData({
+      loadmore: true
+    })
+    getPetsList({
+      cid: this.data.cid,
+      count: 20,
+      page: this.data.page
+    }, false).then(res => {
+      const oldList = this.data.petList
+      const newList = oldList.concat(res.data)
+      this.setData({
+        petList: newList,
+        page: this.data.page + 1,
+        loadmore: false
+      })
+
+      if (newList.length === this.data.total) {
+        this.setData({
+          lastPage: true
+        })
+      }
     })
   }
 })
