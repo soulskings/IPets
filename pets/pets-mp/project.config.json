@@ -87,6 +87,14 @@
 					"id": -1,
 					"name": "pages/user/index",
 					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pet-choice/index",
+					"pathName": "pages/pet-choice/index",
+					"query": "",
 					"scene": null
 				}
 			]

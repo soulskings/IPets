@@ -1,1 +1,41 @@
 /* pages/pet-choice/index.wxss */
+.search-warp {
+  border-bottom: 1px solid #f3f5f7;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 660rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.input {
+  width: 660rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding-left: 90rpx;
+  font-size: 26rpx;
+  background: #f7f7f7;
+}
+
+.search-icon {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: 30rpx;
+  top: 28rpx;
+  z-index: 2;
+}
+
+.cancle {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 25rpx;
+  margin-left: 25rpx;
+}

@@ -37,15 +37,18 @@ const applyDataTemplate = (headers = {}) => {
 const request = (url, options = {}) => {
     const {
         method = 'POST',
-		baseUrl = env.baseUrl,
+        baseUrl = env.baseUrl,
+        showLoading = true,
         exceptionHandle = {}
     } = options
 
     return new Promise((resolve, reject) => {
-        wx.showLoading({
-            title: '加载中...',
-            mask: true
-        })
+        if (showLoading) {
+            wx.showLoading({
+                title: '加载中...',
+                mask: true
+            })
+        }
         wx.request({
             url: baseUrl + url,
             method: method,

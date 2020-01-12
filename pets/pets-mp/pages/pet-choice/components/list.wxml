@@ -1,0 +1,30 @@
+<!--pages/pet-choice/components/list.wxml-->
+<scroll-view
+  scroll-y="true"
+  class="list"
+  scroll-top="{{top}}"
+  bindscrolltolower="loadmore"
+>
+  <view class="title">{{title}}</view>
+  <view class="pet-list">
+    <view 
+      wx:for="{{list}}"
+      wx:key="*this"
+      data-pid="{{item.pid}}"
+      bindtap="goDetail"
+      class="item"
+    >
+      <image class="pet-img" src="{{item.img_url}}"/>
+      <view class="item-txt">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <mp-loading
+    show="{{loadmore}}"
+    type="circle"
+    tips="加载中"
+    ext-class="loadmore"
+  ></mp-loading>
+  <view wx:if="{{lastpage}}" class="no-more">没有更多宠物啦!</view>
+</scroll-view>

@@ -27,8 +27,10 @@ export function getPetsCate() {
 /**
  * 全部宠物列表接口
  */
-export function getPetsList(data) {
-	return requestPost(requesUrl.petsList, data);
+export function getPetsList(data, showLoading) {
+	return requestPost(requesUrl.petsList, data, {
+		showLoading: showLoading
+	});
 }
 /**
  * 热门宠物列表接口
