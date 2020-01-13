@@ -52,6 +52,7 @@ const request = (url, options = {}) => {
         wx.request({
             url: baseUrl + url,
             method: method,
+            timeout: 8000,
             header: options.headers ? options.headers : applyDataTemplate(),
             data: options.data,
             success: function(data) {

@@ -13,8 +13,7 @@ Page({
     page: 0,
     loadmore: false,
     total: 0,
-    lastPage: false,
-    showSearch: false
+    lastPage: false
   },
 
   /**
@@ -143,19 +142,11 @@ Page({
   },
 
   /**
-   * 展示搜索框
+   * 跳转搜索页
    */
   showSearch () {
-    this.setData({
-      showSearch: true
-    })
-  },
-  /**
-   * 取消搜索框
-   */
-  cancle () {
-    this.setData({
-      showSearch: false
+    wx.navigateTo({
+      url: `/pages/search/search`
     })
   }
 })
