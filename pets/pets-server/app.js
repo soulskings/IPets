@@ -5,9 +5,10 @@ require('module-alias/register')
 const fs = require('fs')
 const path = require('path')
 const mongoose = require('mongoose')
+const URI = require('./config/index')
 
-const UsrUri = 'mongodb://192.168.8.196:27017/user'
-const petsUri = 'mongodb://192.168.8.196:27017/pets'
+const UsrUri = `${URI}/user`
+const petsUri = `${URI}/pets`
 const UsrDb = mongoose.createConnection(UsrUri)
 const PetsDb = mongoose.createConnection(petsUri)
 global.UsrDb = UsrDb // 用户库

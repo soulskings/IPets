@@ -7,11 +7,9 @@
         class="input"
         placeholder="搜索宠物"
         bindfocus="showSearch"
-        bindblur="cancle"
       />
       <view
         class="cancle"
-        bindtap="cancle"
       >取消</view>
     </view>
   </view>
@@ -25,5 +23,4 @@
       bindloadEvent="loadMethod"
     ></list>
   </view>
-  <search></search>
 </view>

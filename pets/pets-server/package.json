@@ -4,8 +4,10 @@
   "description": "Hello Koa 2 example with async",
   "main": "app.js",
   "scripts": {
-    "dev": "node-dev app.js",
-    "start": "node app.js"
+    "dev": "node app.js dev",
+    "test": "node app.js test",
+    "pro": "node app.js pro",
+    "watch": "supervisor app.js"
   },
   "keywords": [
     "koa",
