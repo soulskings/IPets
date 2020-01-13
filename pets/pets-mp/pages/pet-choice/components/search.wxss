@@ -1,0 +1,9 @@
+/* pages/pet-choice/components/search.wxss */
+.search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 88rpx;
+  bottom: 0;
+  background: #fff;
+}

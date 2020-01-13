@@ -25,4 +25,5 @@
       bindloadEvent="loadMethod"
     ></list>
   </view>
+  <search></search>
 </view>
