@@ -10,6 +10,7 @@
     width: 100%;
     height: 100rpx;
     line-height: 100rpx;
+    padding: 20rpx;
 }
 .collention-title-text{
     text-align: center;
@@ -18,11 +19,13 @@
 
 .collention-table{
     width: 100%;
+    height: 100%;
 }
 
 .collention-tab{
     width: 100%;
     height: 100rpx;
+    border-bottom: 3rpx solid #eeeeee;
 }
 .collention-tab-item{
     width: 50%;
@@ -33,9 +36,45 @@
 
 .collention-content{
     width: 100%;
-    min-height: 500rpx;
+    position: absolute;
+    bottom: 0;
+    top: 100rpx;
 }
 
 .collention-content-item{
     width: 100%;
+    height: 200rpx;
+    border-bottom: 1rpx solid #eeeeee;
+    display: flex;
+    flex-direction: row;
+}
+
+.collention-item-image{
+    width: 120rpx;
+    height: 120rpx;
+    margin: 40rpx;
+}
+
+.collention-item-right{
+    flex: 1;
+    height: 100%;
+    line-height: 30px;
+    padding: 20rpx 30rpx 0;
+}
+
+.collention-item-right-title{
+    width: 100%;
+    color: #444444;
+}
+.collention-item-right-desc{
+    font-size: 24rpx;
+    line-height: 40rpx;
+    max-height: 80rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    color: #666666;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
 }
