@@ -67,7 +67,7 @@ Component({
     petClick(item) {
       let cid = item.currentTarget.dataset.cid || '';
       wx.navigateTo({
-        url: `/pages/pet-choice/index?id=${cid}`
+        url: `/pages/pet-choice/index?cid=${cid}`
       })
     }
   }
