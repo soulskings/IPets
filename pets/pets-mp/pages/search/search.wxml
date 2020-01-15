@@ -9,11 +9,23 @@
       />
       <view
         class="cancle"
+        bindtap="backMethod"
       >取消</view>
     </view>
   </view>
-  <view class="search-list">
-    <view wx:for="{{List}}" wx:key="*this" class="search-item">
+  <scroll-view
+    scroll-y="true"
+    class="search-list"
+    scroll-top="{{top}}"
+    bindscrolltolower="loadmoreMethod"
+  >
+    <view 
+      wx:for="{{List}}"
+      wx:key="*this"
+      bindtap="goDetail"
+      data-pid="{{item.pid}}"
+      class="search-item"
+    >
       <view class="item-img">
         <image class="img" src="{{item.img_url}}"/>
       </view>
@@ -30,5 +42,12 @@
         <view class="price">指导价: {{item.price_range}}</view>
       </view>
     </view>
-  </view>
+    <mp-loading
+      show="{{loadmore}}"
+      type="circle"
+      tips="加载中"
+      ext-class="loadmore"
+    ></mp-loading>
+    <view wx:if="{{noMore}}" class="no-more">没有更多宠物啦！</view>
+  </scroll-view>
 </view>

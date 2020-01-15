@@ -78,9 +78,11 @@ const request = (url, options = {}) => {
                 }
             },
             fail: function(err) {
-                if (!isSkippedCode) {
+                if (exceptionHandle !== 'skip') {
                     wx.showToast({
-                        title: err.message
+                        title: err.errMsg,
+                        icon: 'none',
+                        duration: 1000
                     })
                     setTimeout(() => {
                         wx.hideToast()

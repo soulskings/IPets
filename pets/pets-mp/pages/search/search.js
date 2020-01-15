@@ -7,7 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    List: []
+    List: [],
+    loadmore: false,
+    pageNum: 1,
+    top: 0,
+    input: '',
+    lastPage: false,
+    noMore: false
   },
 
   /**
@@ -79,14 +85,58 @@ Page({
   },
 
   fetchList (value) {
+    this.setData({
+      input: value
+    })
     getPetsSearchPetList({
       tag: value,
       pageNum: 1,
       pageSize: 10
     }).then((res) => {
       this.setData({
-        List: res.List
+        List: res.List,
+        pageNum: 2,
+        loadmore: false,
+        top: 0,
+        lastPage: res.lastPage,
+        noMore: res.lastPage
       })
     })
+  },
+
+  loadmoreMethod () {
+    if (this.data.lastPage) {
+      this.setData({
+        noMore: true
+      })
+      return
+    }
+    this.setData({
+      loadmore: true
+    })
+    getPetsSearchPetList({
+      tag: this.data.input,
+      pageNum: this.data.pageNum,
+      pageSize: 10
+    }).then((res) => {
+      const newList = this.data.List.concat(res.List)
+      this.setData({
+        loadmore: false,
+        List: newList,
+        pageNum: this.data.pageNum + 1,
+        lastPage: res.lastPage
+      })
+    })
+  },
+
+  goDetail (e) {
+    const pid = e.currentTarget.dataset.pid
+    wx.navigateTo({
+      url: `/pages/pet-detail/index?pid=${pid}`
+    })
+  },
+
+  backMethod () {
+    wx.navigateBack()
   }
 })
