@@ -1,1 +1,46 @@
 /* pages/user/components/userBody.wxss */
+.list-box {
+  border-top: 20rpx solid #c8c7cc;
+  border-bottom: 20rpx solid #c8c7cc;
+}
+.list {
+    display: flex;
+    align-items: center;
+    height: 120rpx;
+}
+
+.list .list-icon {
+  width: 120rpx;
+  text-align: center;
+}
+.list .list-name {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #c8c7cc;
+}
+.list:last-child .list-name {
+  border-bottom: none;
+}
+.list .list-name::after{
+  content: '';
+  border-right: 1rpx solid #c8c7cc;
+  border-bottom: 1rpx solid #c8c7cc;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotateZ(-45deg);
+}
+.sign-out {
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: rgba(255,49,25,0.8);
+  margin: 200rpx 40rpx 0;
+  border-radius: 20rpx;
+}

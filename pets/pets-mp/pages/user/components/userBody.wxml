@@ -1,2 +1,14 @@
 <!--pages/user/components/userBody.wxml-->
-<text>pages/user/components/userBody.wxml</text>
+<view class="list-box">
+    <view class="list">
+        <icon class="list-icon" type="waiting" size="20" color="" />
+        <text class="list-name">我的收藏</text>
+    </view>
+    <view class="list">
+        <icon class="list-icon" type="waiting" size="20" color="" />
+        <text class="list-name">隐私政策</text>
+    </view>
+</view>
+<view class="sign-out">
+    退出登录
+</view>
