@@ -7,11 +7,11 @@ const petListController = async (ctx, next) => {
   const tag = ctx.request.body.tag
   const pageNum = ctx.request.body.pageNum
   const pageSize = ctx.request.body.pageSize
-  const { List, lastPage} = await search({ tag, pageNum, pageSize })
+  const { petList, lastPage} = await search({ tag, pageNum, pageSize })
   ctx.body = {
     code: resCode.SUCCESS,
     data: {
-      List,
+      List: petList,
       lastPage
     },
     message: message.SUCCESS

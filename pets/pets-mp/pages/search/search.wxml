@@ -1,2 +1,34 @@
 <view class="view-report">
+  <view class="search-warp">
+    <view class="search">
+      <image class="search-icon" src="./img/search.png" />
+      <input
+        class="input"
+        placeholder="搜索宠物"
+        bindinput="inputMethod"
+      />
+      <view
+        class="cancle"
+      >取消</view>
+    </view>
+  </view>
+  <view class="search-list">
+    <view wx:for="{{List}}" wx:key="*this" class="search-item">
+      <view class="item-img">
+        <image class="img" src="{{item.img_url}}"/>
+      </view>
+      <view class="item-txt">
+        <view class="txt">宠物名：{{item.name}}</view>
+        <view class="tag">
+          <view 
+            class="tag-item" 
+            wx:for="{{item.tag}}" 
+            wx:key="*this"
+            wx:if="{{index < 3}}"
+          >{{item}}<text wx:if="{{index !== 2}}" class="fx">|</text></view>
+        </view>
+        <view class="price">指导价: {{item.price_range}}</view>
+      </view>
+    </view>
+  </view>
 </view>
