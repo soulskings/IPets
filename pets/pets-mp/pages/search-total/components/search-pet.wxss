@@ -1,0 +1,53 @@
+/* pages/search-total/components/search-pet.wxss */
+.search-pet {
+  padding: 25rpx 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+}
+
+.title-txt {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.more {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #666;
+}
+
+.pet-warp {
+  padding-left: 20rpx;
+  white-space:nowrap;
+  margin-top: 20rpx;
+}
+
+.pet-item {
+  width: 200rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.pet-img {
+  width: 100%;
+  height: 140rpx;
+  border-radius: 15rpx;
+}
+
+.pet-name {
+  width: 100%;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.right-margin {
+  margin-right: 40rpx;
+}

@@ -101,6 +101,13 @@
 					"id": -1,
 					"name": "pages/search/search",
 					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search-total/search-total",
+					"pathName": "pages/search-total/search-total",
 					"scene": null
 				}
 			]
