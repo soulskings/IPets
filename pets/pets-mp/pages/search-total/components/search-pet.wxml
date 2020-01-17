@@ -5,11 +5,13 @@
   </view>
   <scroll-view scroll-x>
     <view class="pet-warp">
-      <view wx:for="{{petList}}" class="pet-item {{index === List.length - 1 ? 'right-margin': ''}}">
+      <view wx:for="{{petList}}" wx:key="*this" class="pet-item {{index === petList.length - 1 ? 'right-margin': ''}}">
         <image
         class="pet-img"
-        src="http://www.ichong123.com/uploads/2014/08/1263.jpg"/>
-        <view class="pet-name">111</view>
+        src="{{item.img_url}}"/>
+        <view class="pet-name">
+          {{item.name}}
+        </view>
       </view>
     </view>
   </scroll-view>

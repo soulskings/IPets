@@ -2,11 +2,11 @@
   <view class="title">
     宠物攻略
   </view>
-  <view wx:for="{{articleList}}" class="item">
-    <view class="item-title">111111111111111111111111111111</view>
+  <view wx:for="{{articleList}}" wx:key="*this" class="item">
+    <view class="item-title">{{item.title}}</view>
     <view class="item-content">
-      <image class="item-img" src="http://www.ichong123.com/uploads/2014/08/1263.jpg" />
-      <view class="content-txt">111</view>
+      <image class="item-img" src="{{item.article_img}}" />
+      <view class="content-txt">{{item.intro}}</view>
     </view>
   </view>
 </view>
