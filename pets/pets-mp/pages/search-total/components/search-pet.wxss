@@ -25,7 +25,7 @@
 .pet-warp {
   padding-left: 20rpx;
   white-space:nowrap;
-  margin-top: 20rpx;
+  padding-top: 20rpx;
 }
 
 .pet-item {
