@@ -63,5 +63,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 输入确认
+   */
+  confirm () {
   }
 })
