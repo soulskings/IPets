@@ -1,8 +1,6 @@
-.head {
-  margin-top: 10rpx;
-  padding: 0 40rpx 20rpx;
-  display: flex;
-  justify-content: space-between;
+/* pages/search-total/search-total.wxss */
+/* pages/search/search.wxss */
+.search-warp {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,24 +10,6 @@
   border-bottom: 1px solid #f3f5f7;
 }
 
-.photo {
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 50%;
-}
-
-.search-input {
-  display: inline-block;
-  width: calc(100% - 152rpx);
-  text-align: center;
-  padding: 19rpx 0;
-  border: 1rpx solid #c8c7cc;
-  border-radius: 16rpx;
-}
-.search-warp {
-  position: relative;
-}
-
 .search {
   position: relative;
   display: flex;
@@ -37,11 +17,11 @@
   justify-content: center;
   width: 660rpx;
   height: 88rpx;
-  margin: 0 auto;
+  margin-left: 40rpx;
 }
 
 .input {
-  width: 480rpx;
+  width: 660rpx;
   height: 60rpx;
   border-radius: 30rpx;
   padding-left: 90rpx;
@@ -54,6 +34,23 @@
   width: 30rpx;
   height: 30rpx;
   left: 30rpx;
-  top: 16rpx;
+  top: 28rpx;
   z-index: 2;
+}
+
+.cancle {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 25rpx;
+  margin-left: 25rpx;
+}
+
+.scroll-content {
+  position: absolute;
+  top: 90rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

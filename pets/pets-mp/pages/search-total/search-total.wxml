@@ -1,0 +1,20 @@
+<view class="view-report">
+  <view class="search-warp">
+    <view class="search">
+      <image class="search-icon" src="./img/search.png" />
+      <input
+        class="input"
+        placeholder="搜索宠物"
+        bindconfirm="confirm"
+      />
+      <view
+        class="cancle"
+        bindtap="backMethod"
+      >取消</view>
+    </view>
+  </view>
+  <scroll-view class="scroll-content" scroll-y>
+    <search-pet petList="{{petList}}"></search-pet>
+    <search-article articleList="{{articleList}}"></search-article>
+  </scroll-view>
+</view>

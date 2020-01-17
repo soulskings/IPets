@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search-pet": "./components/search-pet",
+    "search-article": "./components/search-article"
+  }
+}

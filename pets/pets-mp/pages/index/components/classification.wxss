@@ -1,5 +1,5 @@
 .classification {
-  padding: 0 40rpx;
+  padding: 100rpx 40rpx 0;
 }
 
 .classification-box {
@@ -21,4 +21,5 @@
 .classification-box .fication .classification-name {
   display: block;
   text-align: center;
+  font-size: 26rpx;
 }

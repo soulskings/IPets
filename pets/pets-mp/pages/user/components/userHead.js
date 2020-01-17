@@ -74,11 +74,9 @@ create.Component(store, {
               token: (data && data.token) || '',
               openid: (data && data.openid) || ''
             }
-            this.setData({
-              token: obj.token
-            })
             wx.setStorageSync('token',obj.token)
-            wx.setStorageSync('openid',obj.openid)
+            wx.setStorageSync('openid', obj.openid)
+            this.infoFn();
           })
           .catch(rej => {
             wx.showToast({
