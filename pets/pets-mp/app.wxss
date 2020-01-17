@@ -1,10 +1,10 @@
 /**app.wxss**/
 .classification-type {
-    font-size: 40rpx;
+    font-size: 32rpx;
     color: #333;
     display: block;
-    height: 80rpx;
-    line-height: 80rpx;
+    height: 60rpx;
+    line-height: 60rpx;
     font-weight: 500;
 }
 .btn{

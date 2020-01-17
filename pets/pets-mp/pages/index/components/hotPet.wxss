@@ -8,7 +8,7 @@
 }
 
 .hot-pet .label-type {
-  font-size: 36rpx;
+  font-size: 28rpx;
 }
 
 .hot-pet .label-box {
@@ -22,7 +22,7 @@
 }
 
 .hot-pet .c-tag {
-  background-color: #ff9d00;
+  background-color: #ffd900;
   color: #fff;
-  border-color: #ff9d00;
+  border-color: #ffd900;
 }

@@ -1,13 +1,20 @@
 .head {
   margin-top: 10rpx;
-  padding: 0 40rpx;
+  padding: 0 40rpx 20rpx;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #fff;
+  border-bottom: 1px solid #f3f5f7;
 }
 
 .photo {
-  width: 80rpx;
-  height: 80rpx;
+  width: 60rpx;
+  height: 60rpx;
   border-radius: 50%;
 }
 
@@ -18,4 +25,35 @@
   padding: 19rpx 0;
   border: 1rpx solid #c8c7cc;
   border-radius: 16rpx;
+}
+.search-warp {
+  position: relative;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 660rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.input {
+  width: 480rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding-left: 90rpx;
+  font-size: 26rpx;
+  background: #f7f7f7;
+}
+
+.search-icon {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: 30rpx;
+  top: 16rpx;
+  z-index: 2;
 }
