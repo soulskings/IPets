@@ -19,11 +19,6 @@ Page({
    */
   onLoad: function (options) {
     this.refreshData()
-    // getPetsFocuspets({pageSize: 10, pageNum: 1}).then(res => {
-    //   console.log(res)
-    // }).catch(err => {
-    //   console.log(err)
-    // })
   },
 
   refreshData() {
