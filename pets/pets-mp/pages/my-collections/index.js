@@ -45,8 +45,8 @@ Page({
     })
     
     let fetchList = activetype == 0 ? getPetsFocuspets : getPetsFocusarticle
-    fetchList({pageSize: 10, pageNum: this.page}).then(res => {
-      let {ListArr = [], lastPage = true} =  {}
+    fetchList({pageSize: 10, pageNum: page}).then(res => {
+      let {ListArr = [], lastPage = true} = res
       // if(activetype == 0){
       //   for(let i = 0; i< 10; i++){
       //     ListArr.push({

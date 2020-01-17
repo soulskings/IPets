@@ -1,6 +1,6 @@
 <!--pages/user/components/userBody.wxml-->
 <view class="list-box">
-    <view class="list">
+    <view class="list" bindtap="goCollect">
         <icon class="list-icon" type="waiting" size="20" color="" />
         <text class="list-name">我的收藏</text>
     </view>
