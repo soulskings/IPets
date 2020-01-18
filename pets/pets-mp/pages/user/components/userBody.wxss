@@ -39,12 +39,17 @@
   height: 20rpx;
   transform: rotateZ(-45deg);
 }
-.sign-out {
+.sign-btn{
   height: 80rpx;
   text-align: center;
   line-height: 80rpx;
   color: #fff;
-  background-color: #feca2b;
   margin: 200rpx 40rpx 0;
   border-radius: 30rpx;
+}
+.sign-out {
+ background-color: #ccc;
+}
+.sign-login {
+  background-color: #feca2b;
 }

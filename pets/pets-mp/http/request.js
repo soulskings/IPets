@@ -65,13 +65,19 @@ const request = (url, options = {}) => {
                     if (!isSkippedCode) {
                        // 公用逻辑：比如鉴权跳转
                         if (data.data.code === '0001' || data.data.code === '0002') {
-                            // 跳转登录页
+                          // 跳转登录页 
+                          wx.navigateTo({
+                            url: '/pages/login/login'
+                          })
                         }
                     }
                     if (exceptionHandle === 'skip') {
                     } else if (~Object.keys(exceptionHandle).indexOf(code.toString())) {
                         if (data.data.code === '0001' || data.data.code === '0002') {
                             // 跳转登录页
+                          wx.navigateTo({
+                            url: '/pages/login/login'
+                          })
                         }
                     }
                     reject(data.data)

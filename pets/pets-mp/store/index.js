@@ -3,6 +3,7 @@ export default {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    hasToken: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     logs: []
   },

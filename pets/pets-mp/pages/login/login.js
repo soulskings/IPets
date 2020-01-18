@@ -1,5 +1,13 @@
 // pages/login/login.js
-Page({
+import { replaceToken } from '../../http/index.js'
+import create from '../../utils/create'
+import store from '../../store/index'
+create.Page(store, {
+  use: [
+    'userInfo',
+    'hasUserInfo',
+    'hasToken'
+  ],
 
   /**
    * 页面的初始数据
@@ -12,9 +20,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
+  getPhoneNumber() {
+    
+  },
+  tokenFn(res) {
+    replaceToken({ code: (res && res.code) || '' })
+      .then(data => {
+        let obj = {
+          token: (data && data.token) || '',
+          openid: (data && data.openid) || ''
+        }
+        wx.setStorageSync('token', obj.token)
+        wx.setStorageSync('openid', obj.openid)
+        wx.navigateBack();
+      })
+      .catch(rej => {
+        wx.showToast({
+          title: '标题',
+          duration: rej.message
+        })
+      })
+  },
+  login() {
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        this.tokenFn(res);
+      },
+      err: rej => {
 
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -5,7 +5,8 @@ import store from '../../../store/index'
 create.Component(store, {
   use: [
     'userInfo',
-    'hasUserInfo'
+    'hasUserInfo',
+    'hasToken'
   ],
   /**
    * 组件的属性列表
@@ -18,19 +19,22 @@ create.Component(store, {
    * 组件的初始数据
    */
   data: {
-    token: '',
+    // token: '',
     isAuthorize: true,
     // userInfo: {},
     // hasUserInfo: false
   },
   computed: {
     userInfo() {
-      return this.userInfo
+      return this.userInfo;
+    },
+    token() {
+      return this.hasToken;
     }
   },
   lifetimes: {
     created() {
-      this.getSetting();
+      // this.getSetting();
     }
   },
   pageLifetimes: {
@@ -44,14 +48,22 @@ create.Component(store, {
    */
   methods: {
     authorizeFn(res) {
-      if (res && res.detail && res.detail.errMsg === 'getUserInfo:ok') {
-        this.setData({
-          isAuthorize: true,
-          userInfo: res.detail.rawData || {},
-          hasUserInfo: true
+      console.log(this.data.token)
+      if (!this.data.token) {
+        wx.showToast({
+          title: '请先登录',
+          icon: 'none',
         })
+        return;
+      }
+      if (res && res.detail && res.detail.errMsg === 'getUserInfo:ok') {
+        // this.setData({
+        //   isAuthorize: true,
+        //   userInfo: res.detail.rawData || {},
+        //   hasUserInfo: true
+        // })
         // wx.setStorageSync('userInfo',JSON.stringify(res.detail.rawData))
-        this.store.data.userInfo = res.detail.rawData;
+        this.store.data.userInfo = res.detail.userInfo;
         this.store.data.hasUserInfo = true;
       }
     },
