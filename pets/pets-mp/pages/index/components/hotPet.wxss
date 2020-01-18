@@ -22,7 +22,7 @@
 }
 
 .hot-pet .c-tag {
-  background-color: #ffd900;
+  background-color: #ff9d00;
   color: #fff;
-  border-color: #ffd900;
+  border-color: #ff9d00;
 }
