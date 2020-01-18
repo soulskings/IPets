@@ -10,7 +10,7 @@ let requesUrl = {
 	/**
 	 * 退出登录接口
 	 */
-	petsList : 'pets/quit',
+  petsQuit : 'pets/quit',
 	/**
 	 * 宠物种类列表接口
 	 */

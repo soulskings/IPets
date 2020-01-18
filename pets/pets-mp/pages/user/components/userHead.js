@@ -20,7 +20,13 @@ create.Component(store, {
   data: {
     token: '',
     isAuthorize: true,
-    userInfo: {}
+    // userInfo: {},
+    // hasUserInfo: false
+  },
+  computed: {
+    userInfo() {
+      return this.userInfo
+    }
   },
   lifetimes: {
     created() {
@@ -41,11 +47,13 @@ create.Component(store, {
       if (res && res.detail && res.detail.errMsg === 'getUserInfo:ok') {
         this.setData({
           isAuthorize: true,
-          userInfo: res.detail.rawData || {}
+          userInfo: res.detail.rawData || {},
+          hasUserInfo: true
         })
         // wx.setStorageSync('userInfo',JSON.stringify(res.detail.rawData))
         this.store.data.userInfo = res.detail.rawData;
-      } 
+        this.store.data.hasUserInfo = true;
+      }
     },
     // 判断用户是否授权
     getSetting() {
@@ -96,9 +104,10 @@ create.Component(store, {
         success: res => {
           // wx.setStorageSync('userInfo',JSON.stringify(res.rawData))
           this.store.data.userInfo = JSON.parse(res.rawData);
+          this.store.data.hasUserInfo = true;
           this.setData({
             userInfo: this.store.data.userInfo || {},
-            token : wx.getStorageSync('token') || '',
+            token : wx.getStorageSync('token') || ''
           })
         },
         fail: rej => {

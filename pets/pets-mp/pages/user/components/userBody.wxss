@@ -36,11 +36,11 @@
   transform: rotateZ(-45deg);
 }
 .sign-out {
-  height: 100rpx;
+  height: 80rpx;
   text-align: center;
-  line-height: 100rpx;
+  line-height: 80rpx;
   color: #fff;
-  background-color: rgba(255,49,25,0.8);
+  background-color: #ffd900;
   margin: 200rpx 40rpx 0;
   border-radius: 20rpx;
 }

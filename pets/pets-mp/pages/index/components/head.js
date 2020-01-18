@@ -14,6 +14,11 @@ create.Component(store, {
     avatarUrl: '',
     errorUrl: '/images/8.jpg', // 失败时默认图片 图片待替换
   },
+  computed: {
+    userInfo() {
+      return this.userInfo
+    }
+  },
   lifetimes: {
     created() {
       console.log('created');
