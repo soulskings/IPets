@@ -20,22 +20,22 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#333",
-    "selectedColor": "#ffd900",
+    "color": "#888",
+    "selectedColor": "#ff9d00",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "攻略",
-        "iconPath": "images/dish_tab_bar.png",
-        "selectedIconPath": "images/dish_tab_bar.png"
+        "iconPath": "images/strategy.png",
+        "selectedIconPath": "images/strategy-act.png"
       },
       {
         "pagePath": "pages/user/index",
         "text": "我的",
-        "iconPath": "images/mine_tab_bar.png",
-        "selectedIconPath": "images/mine_tab_bar.png"
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-act.png"
       }
     ]
   }

@@ -42,17 +42,28 @@ const search = ({ tag, pageNum, pageSize }) => {
                   checkList.push(item)
                 }
               })
-              
-              // 按匹配次数排序
-              let sortList = checkList.sort((a, b) => {
-                let prevI = a['i']
-                let nextI = b['i']
-                if (prevI && nextI) {
-                  return nextI - prevI
+
+              let sortList = [] // 接下来继续排序宠物
+              let priorityList = [] // 优选级最高宠物
+              // 筛选出tag完全匹配的宠物
+              checkList.forEach((item) => {
+                if (item['i']) {
+                  sortList.push(item)
+                } else {
+                  priorityList.push(item)
                 }
               })
 
-              let petList = sortList.slice((pageNum - 1) * pageSize, pageNum * pageSize)
+              // 按匹配次数排序
+              let newSortList = sortList.sort((a, b) => {
+                let prevI = a['i']
+                let nextI = b['i']
+                return nextI - prevI
+              })
+
+              const outList = priorityList.concat(newSortList)
+
+              let petList = outList.slice((pageNum - 1) * pageSize, pageNum * pageSize)
 
               if (pageNum * pageSize >= sortList.length) {
                 lastPage = true

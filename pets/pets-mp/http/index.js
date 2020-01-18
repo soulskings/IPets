@@ -59,14 +59,18 @@ export function getPetsHotSearch(data) {
 /**
  * 搜索宠物列表接口
  */
-export function getPetsSearchPetList(data) {
-	return requestPost(requesUrl.petsSearchPetList, data);
+export function getPetsSearchPetList(data, showLoading = true) {
+	return requestPost(requesUrl.petsSearchPetList, data, {
+		showLoading: showLoading
+	});
 }
 /**
  * 搜索文章列表接口
  */
-export function getPetsSearchArticle(data) {
-	return requestPost(requesUrl.petsSearchArticle, data);
+export function getPetsSearchArticle(data, showLoading = true) {
+	return requestPost(requesUrl.petsSearchArticle, data, {
+		showLoading: showLoading
+	});
 }
 /**
  * 收藏列表接口

@@ -1,4 +1,6 @@
 // pages/search-total/search-total.js
+import { getPetsSearchPetList, getPetsSearchArticle } from '../../http/index'
+let timer
 Page({
 
   /**
@@ -6,7 +8,11 @@ Page({
    */
   data: {
     petList: [], // 宠物列表
-    articleList: [] // 文章列表
+    articleList: [], // 文章列表
+    noMore: false,
+    loadmore: false,
+    pageNum: 1,
+    tag: ''
   },
 
   /**
@@ -65,9 +71,80 @@ Page({
 
   },
 
+  fetchPet (value) {
+    getPetsSearchPetList({
+      tag: value,
+      pageNum: 1,
+      pageSize: 8
+    }, false).then((res) => {
+      this.setData({
+        petList: res.List
+      })
+    })
+  },
+
+  fetchArticle (value) {
+    this.setData({
+      loadmore: true
+    })
+    getPetsSearchArticle({
+      tag: value,
+      pageNum: 1,
+      pageSize: 8
+    }, false).then((res) => {
+      this.setData({
+        articleList: res.list,
+        loadmore: false,
+        noMore: res.lastPage,
+        pageNum: 2
+      })
+    })
+  },
+
   /**
-   * 输入确认
+   * 输入搜索
    */
-  confirm () {
+  inputMethod (e) {
+    let value = e.detail.value
+    this.debounce(value)
+  },
+
+  debounce (value) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      this.setData({
+        tag: value
+      })
+      this.fetchPet(value)
+      this.fetchArticle(value)
+    }, 300)
+  },
+
+  /**
+   * 加载更多
+   */
+  loadmoreMethod () {
+    this.setData({
+      loadmore: true
+    })
+    getPetsSearchArticle({
+      tag: this.data.tag,
+      pageNum: this.data.pageNum,
+      pageSize: 8
+    }, false).then((res) => {
+      this.setData({
+        articleList: this.data.articleList.concat(res.list),
+        loadmore: false,
+        noMore: res.lastPage,
+        pageNum: this.data.pageNum + 1
+      })
+    })
+  },
+
+  /**
+   * 返回
+   */
+  backMethod () {
+    wx.navigateBack()
   }
 })

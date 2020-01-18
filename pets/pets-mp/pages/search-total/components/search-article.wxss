@@ -37,7 +37,7 @@
 
 .content-txt {
   flex: 1;
-  font-size: 32rpx;
+  font-size: 30rpx;
   color: #999;
   padding-left: 25rpx;
   font-weight: 350;

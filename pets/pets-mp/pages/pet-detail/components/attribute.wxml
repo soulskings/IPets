@@ -5,7 +5,7 @@
   </view>
   <view class="describe {{hide ? 'hide' : 'show'}}">
     <text>简介：{{detail.intro}}</text>
-    <view 
+    <view
       class="icon-warp {{hide ? 'icon-hide' : 'icon-show'}}" 
       bindtap="show"
     >
@@ -22,7 +22,7 @@
     >{{item}}</view>
     <view wx:if="{{showAll}}">
       <view wx:if="{{detail.characteristics}}" class="attr-item">
-        形态特征 
+        形态特征
         <text 
           class="check"
           data-title="形态特征"
@@ -31,7 +31,7 @@
         >点击查看</text>
       </view>
       <view wx:if="{{detail.personality}}" class="attr-item">
-        性格特点 
+        性格特点
         <text 
           class="check"
           data-title="性格特点"

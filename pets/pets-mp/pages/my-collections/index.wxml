@@ -3,15 +3,31 @@
     <view class="collention-table">
         <view class="collention-tab">
             <view class="collention-tab-item collention-tab-1">
-                <text bindtap="handleClickTab" id="tab-item0" class="collention-title-text">收藏文章</text>
+                <text bindtap="handleClickTab" 
+                    id="tab-item0" 
+                    class="collention-title-text {{activetype == 0 ? 'collention-title-text-active' : ''}}"
+                >收藏文章</text>
             </view>
             <view class="collention-tab-item collention-tab-2">
-                <text bindtap="handleClickTab" id="tab-item1" class="collention-title-text">宠物</text>
+                <text bindtap="handleClickTab" 
+                    id="tab-item1" 
+                    class="collention-title-text {{activetype == 1 ? 'collention-title-text-active' : ''}}"
+                >宠物</text>
             </view>
         </view>
-        <view class="collention-content">
-            <view wx:if="{{activetype == 0}}" wx:for="{{articlelist}}" wx:key="index" class="collention-content-item">
-                <image class="collention-item-image" src="../pet-detail/img/wechat-icon.png"/>
+        <scroll-view 
+            class="collention-content"
+            scroll-y="true"
+            bindscrolltolower="loadData"
+            lower-threshold="50">
+            <view wx:if="{{activetype == 0}}" 
+                wx:for="{{listData}}" 
+                wx:key="index" 
+                bindtap="goArticleDetail"
+                data-articleid="{{item.article_id}}"
+                data-articletype="{{item.article_type}}"
+                class="collention-content-item">
+                <image class="collention-item-image" src="{{item.original_url}}"/>
                 <view class="collention-item-right">
                     <view class="collention-item-right-title"> 
                         <text class="collention-item-right-title-text">{{item.title}}</text>
@@ -21,9 +37,37 @@
                     </view>
                 </view>
             </view>
-            <view wx:if="{{activetype == 1}}" wx:for="{{petlist}}" wx:key="index" class="collention-content-item">
-                page1
+            <view wx:if="{{activetype == 1}}" 
+                wx:for="{{listData}}" 
+                wx:key="*this"
+                bindtap="goPetDetail"
+                data-pid="{{item.pid}}"
+                class="collention-content-item collention-content-item-pet">
+                <view class="item-img">
+                    <image class="img" src="{{item.img_url}}"/>
+                </view>
+                <view class="item-txt">
+                    <view class="txt">宠物名：{{item.name}}</view>
+                    <view class="tag">
+                    <view 
+                        class="tag-item" 
+                        wx:for="{{item.tag}}" 
+                        wx:key="*this"
+                        wx:if="{{index < 3}}"
+                    >{{item}}<text wx:if="{{index !== 2}}" class="fx">|</text></view>
+                    </view>
+                    <!-- <view class="price">指导价: {{item.price_range}}</view> -->
+                </view>
             </view>
-        </view>
+
+            <mp-loading
+                show="{{more && status=='idle'}}"
+                type="circle"
+                tips="加载中"
+                ext-class="loadmore"
+            ></mp-loading>
+            <view wx:if="{{!more && status!='failed'}}" class="no-more">没有更多啦，再去转转吧</view>
+            <view wx:if="{{status=='failed'}}" bindtap="loadData" class="no-more load-failed">加载失败，点击重试</view>
+        </scroll-view>
     </view>
 </view>
