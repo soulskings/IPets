@@ -5,7 +5,7 @@
       <input
         class="input"
         placeholder="搜索宠物"
-         bindinput="inputMethod"
+        bindinput="inputMethod"
       />
       <view
         class="cancle"
@@ -14,7 +14,7 @@
     </view>
   </view>
   <scroll-view class="scroll-content" scroll-y bindscrolltolower="loadmoreMethod">
-    <search-pet petList="{{petList}}"></search-pet>
+    <search-pet petList="{{petList}}" tag="{{tag}}"></search-pet>
     <search-article articleList="{{articleList}}"></search-article>
     <mp-loading
       show="{{loadmore}}"

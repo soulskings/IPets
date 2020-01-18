@@ -1,7 +1,7 @@
 <view class="search-pet">
   <view class="title">
     <view class="title-txt">宠物</view>
-    <view class="more">更多 ></view>
+    <view class="more" bindtap="more">更多 ></view>
   </view>
   <scroll-view scroll-x>
     <view class="pet-warp">

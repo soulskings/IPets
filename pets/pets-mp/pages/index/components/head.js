@@ -38,7 +38,7 @@ create.Component(store, {
     // 搜索
     search() {
       wx.navigateTo({
-        url: `/pages/search/search`
+        url: `/pages/search-total/search-total`
       })
     }
   }

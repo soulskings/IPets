@@ -139,5 +139,12 @@ Page({
         pageNum: this.data.pageNum + 1
       })
     })
+  },
+
+  /**
+   * 返回
+   */
+  backMethod () {
+    wx.navigateBack()
   }
 })

@@ -7,6 +7,10 @@ Component({
     petList: {
       type: Array,
       value: []
+    },
+    tag: {
+      type: String,
+      value: ''
     }
   },
 
@@ -20,6 +24,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    more () {
+      wx.navigateTo({
+        url: `/pages/search/search?tag=${this.properties.tag}`
+      })
+    }
   }
 })
