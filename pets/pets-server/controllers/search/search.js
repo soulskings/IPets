@@ -16,7 +16,7 @@ const hotSearch = async (ctx, next) => {
     }
 
     await new Promise(resolve => {
-        List.find({}).sort({popularity: -1}).exec((err, res) => {
+        List.find().lean().sort({popularity: -1}).exec((err, res) => {
             if(err){
                 throw new CustomError({
                     code: resCode.ERROR,
