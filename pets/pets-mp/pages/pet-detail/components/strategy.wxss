@@ -12,8 +12,20 @@
 }
 
 .title-txt {
+  position: relative;
   font-size: 35rpx;
   font-weight: 500;
+  padding-left: 24rpx;
+}
+
+.title-txt::before {
+  content: '';
+  position: absolute;
+  top: 6rpx;
+  left: -4rpx;
+  width: 8rpx;
+  height: 34rpx;
+  background: #ff9d00;
 }
 
 .list {
