@@ -9,8 +9,9 @@ const jwt = require('jsonwebtoken')
 const replaceTokenController = async (ctx, next) => {
   let body
   const code = ctx.request.body.code
+  const mobile = ctx.request.body.mobile || '18132739007'
 
-  if (!code) {
+  if (!code || !mobile) {
     throw new CustomError(template.paramsError)
   } else {
     // 请求微信登录凭证校验
@@ -43,7 +44,8 @@ const replaceTokenController = async (ctx, next) => {
     // 保存用户token
     await saveToken({
       user,
-      Token
+      Token,
+      mobile
     })
 
     body = {
