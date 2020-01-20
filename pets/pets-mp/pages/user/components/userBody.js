@@ -48,6 +48,8 @@ create.Component(store, {
         .then((res) => {
           wx.removeStorage('token')
           wx.removeStorage('openid')
+          this.store.data.userInfo = {};
+          this.store.data.hasUserInfo = false;
           this.store.data.hasToken = false;
         })
     },
@@ -64,6 +66,11 @@ create.Component(store, {
               wx.setStorageSync('token', obj.token)
               wx.setStorageSync('openid', obj.openid)
               this.store.data.hasToken = true;
+              wx.showToast({
+                icon: 'success',
+                title: '登录成功',
+                duration: 1000
+              })
             })
             .catch(rej => {
               wx.showToast({
