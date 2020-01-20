@@ -7,7 +7,7 @@ const saveToken = ({ user, Token, mobile }) => {
       if (err) return reject()
       if (res.length > 0) {
         // 如果用户存在则更新token
-        tokenDb.update(query, { token: Token, time: user.time, mobile }, () => {})
+        tokenDb.update(query, { session_key: user.session_key, token: Token, time: user.time, mobile }, () => {})
       } else {
         // 如果不存在用户则插入用户信息
         new tokenDb({
