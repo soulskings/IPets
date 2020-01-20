@@ -32,6 +32,7 @@ create.Page(store, {
           token: (data && data.token) || '',
           openid: (data && data.openid) || ''
         }
+        this.store.data.hasToken = true;
         wx.setStorageSync('token', obj.token)
         wx.setStorageSync('openid', obj.openid)
         wx.navigateBack();
