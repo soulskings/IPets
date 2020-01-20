@@ -40,7 +40,7 @@ create.Page(store, {
       .catch(rej => {
         wx.showToast({
           title: '标题',
-          duration: rej.message
+          duration: 1000
         })
       })
   },
