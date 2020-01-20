@@ -7,7 +7,6 @@ const focusPetsController = async (ctx, next) => {
   const openid = ctx.header.openid
   const pageNum = ctx.request.body.pageNum
   const pageSize = ctx.request.body.pageSize || 10
-  console.log(111, openid, ctx.request.body)
 
   if (!pageNum || !openid) throw new CustomError(template.paramsError)
 
