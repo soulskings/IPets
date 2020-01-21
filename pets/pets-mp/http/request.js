@@ -73,12 +73,6 @@ const request = (url, options = {}) => {
                     }
                     if (exceptionHandle === 'skip') {
                     } else if (~Object.keys(exceptionHandle).indexOf(code.toString())) {
-                        if (data.data.code === '0001' || data.data.code === '0002') {
-                            // 跳转登录页
-                          wx.navigateTo({
-                            url: '/pages/login/login'
-                          })
-                        }
                     }
                     reject(data.data)
                 }
