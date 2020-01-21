@@ -4,12 +4,12 @@
 }
 
 .swiper-warp {
-  height: 390rpx;
+  height: 400rpx;
 }
 
 .item-img {
   width: 95%;
-  height: 390rpx;
+  height: 400rpx;
   border-radius: 20rpx;
   margin: 0 auto;
 }
