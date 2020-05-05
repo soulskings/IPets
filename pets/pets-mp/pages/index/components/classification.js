@@ -10,7 +10,7 @@ Component({
    * 页面的初始数据
    */
   data: {
-    errorUrl: '/images/8.jpg', // 失败时默认图片 图片待替换
+    errorUrl: ['/images/dog.jpg', '/images/cat.jpg', '/images/rat.jpg', '/images/rabbit.jpg'], // 失败时默认图片 图片待替换
     srcList: [
       // {
       //   img: '/images/8.jpg',

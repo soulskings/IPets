@@ -12,7 +12,7 @@ create.Component(store, {
     searchVal: '',
     list:'',
     avatarUrl: '',
-    errorUrl: '/images/8.jpg', // 失败时默认图片 图片待替换
+    errorUrl: '/images/logo.jpeg', // 失败时默认图片 图片待替换
   },
   computed: {
     userInfo() {
