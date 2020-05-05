@@ -14,7 +14,9 @@
       bindtap="goDetail"
       class="item"
     >
-      <image class="pet-img" src="{{item.img_url}}"/>
+      <image wx:if="{{item.cid === '0' || item.cid === '1'}}" class="pet-img" src="{{item.img_url}}"/>
+      <image wx:if="{{item.cid === '2'}}" class="pet-img" src="{{item.img_url === 'http://www.ichong123.com/' ? '../../../images/rat.jpg': item.img_url}}"/>
+      <image wx:if="{{item.cid === '3'}}" class="pet-img" src="{{item.img_url === 'http://www.ichong123.com/' ? '../../../images/rabbit.jpg': item.img_url}}"/>
       <view class="item-txt">
         {{item.name}}
       </view>
