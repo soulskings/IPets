@@ -1,0 +1,88 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+		,{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+		,{
+            "path" : "pages/userCollection/index",
+            "style" : {
+				"navigationBarTitleText": "我的收藏"
+			}
+        }
+        ,{
+            "path" : "pages/userPrivacy/index",
+            "style" : {
+				"navigationBarTitleText": "隐私"
+			}
+        }
+        ,{
+            "path" : "pages/petChoice/index",
+            "style" : {
+				"navigationBarTitleText": "宠物选择"
+			}
+        }
+        ,{
+            "path" : "pages/petStrategyDetail/index",
+            "style" : {
+				"navigationBarTitleText": "宠物攻略详情"
+			}
+        }
+        ,{
+            "path" : "pages/petSearch/index",
+            "style" : {
+				"navigationBarTitleText": "搜索结果"
+			}
+        }
+        ,{
+            "path" : "pages/article/index",
+            "style" : {
+				"navigationBarTitleText": "文章详情"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#ff9d00",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "攻略",
+				"iconPath": "static/images/dish_tab_bar.png",
+				"selectedIconPath": "static/images/dish_tab_bar.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的",
+				"iconPath": "static/images/mine_tab_bar.png",
+				"selectedIconPath": "static/images/mine_tab_bar.png"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "test", //模式名称
+				"path": "pages/index/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

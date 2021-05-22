@@ -1,0 +1,51 @@
+/* pages/search-total/components/search-article.wxss */
+.search-article {
+  border-top: 20rpx solid #f3f5f76c;
+}
+
+.title {
+  padding: 25rpx 40rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.item {
+  border-bottom: 10rpx solid #f3f5f76c;
+}
+
+.item-title {
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 20rpx 40rpx;
+  padding-bottom: 10rpx;
+  word-break: break-all;
+}
+
+.item-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 40rpx;
+  padding-bottom: 30rpx;
+}
+
+.item-img {
+  width: 200rpx;
+  height: 140rpx;
+  border-radius: 15rpx;
+}
+
+.content-txt {
+  flex: 1;
+  font-size: 30rpx;
+  color: #999;
+  padding-left: 25rpx;
+  font-weight: 350;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

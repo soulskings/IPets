@@ -1,0 +1,12 @@
+<view class="search-article">
+  <view class="title">
+    宠物攻略
+  </view>
+  <view wx:for="{{articleList}}" wx:key="*this" class="item">
+    <view class="item-title">{{item.title}}</view>
+    <view class="item-content">
+      <image class="item-img" src="{{item.article_img}}" />
+      <view class="content-txt">{{item.intro}}</view>
+    </view>
+  </view>
+</view>

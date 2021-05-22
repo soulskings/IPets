@@ -1,0 +1,25 @@
+.classification {
+  padding: 100rpx 40rpx 0;
+}
+
+.classification-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.classification-box .fication {
+  margin-bottom: 20rpx;
+  width: calc(50% - 5rpx);
+}
+
+.classification-box .fication .fication-img {
+  width: 100%;
+  border-radius: 16rpx;
+}
+
+.classification-box .fication .classification-name {
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+}

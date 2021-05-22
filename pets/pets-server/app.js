@@ -1,18 +1,26 @@
 require('babel-core/register')
 require('babel-polyfill')
+require('module-alias/register')
 
 const fs = require('fs')
 const path = require('path')
 const mongoose = require('mongoose')
+const URI = require('./config/index')
 
-const db = 'mongodb://localhost/test'
+const UsrUri = `${URI}/user`
+const petsUri = `${URI}/pets`
+const UsrDb = mongoose.createConnection(UsrUri)
+const PetsDb = mongoose.createConnection(petsUri)
+global.UsrDb = UsrDb // 用户库
+global.PetsDb = PetsDb // 宠物库
+global.Schema = mongoose.Schema
 
 /**
  * mongoose连接数据库
  * @type {[type]}
  */
 mongoose.Promise = require('bluebird')
-mongoose.connect(db)
+// mongoose.connect()
 
 /**
  * 获取数据库表对应的js对象所在的路径
@@ -48,17 +56,22 @@ const Koa = require('koa')
 const logger = require('koa-logger')
 const session = require('koa-session')
 const cors = require('koa2-cors')
-const bodyParser = require('koa-bodyparser')
 var body = require('koa-body')
 
-const controller = require('./controller')
+const router = require('./router')
 
 const app = new Koa()
+
+
+/**
+ * 自定义中间件
+ */
+const error = require('./middleware/error-middlerware')
+const check = require('./middleware/check-token')
 
 app.use(logger())
 app.use(cors())
 app.use(session(app))
-app.use(bodyParser())
 
 // log request URL:
 app.use(async (ctx, next) => {
@@ -68,12 +81,17 @@ app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url} ...`)
 });
 
+// token鉴权
+app.use(check)
+
+// 统一处理业务错误
+app.use(error)
 
 // parse request body:
 app.use(body())
 
 // add controllers:
-app.use(controller())
+app.use(router())
 
-app.listen(3001)
-console.log('app started at port 3001...')
+app.listen(8080)
+console.log('app started at port 8080...')

@@ -1,0 +1,18 @@
+<!--pages/pet-detail/components/strategy.wxml-->
+<view class="strategy {{border === 'true' ? 'border' : ''}}">
+  <view class="title">
+    <text class="title-txt">{{ title }}</text>
+  </view>
+  <view class="list">
+    <view 
+      wx:for="{{List}}" 
+      wx:key="*this" 
+      class="item"
+      data-articleId="{{item.article_id}}"
+      data-articleType="{{item.article_type}}"
+      bindtap="goArticleMethod"
+    >
+      <text class="item-txt">{{item.title}}</text>
+    </view>
+  </view>
+</view>

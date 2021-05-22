@@ -1,0 +1,13 @@
+.c-tag {
+  width: 100%;
+}
+
+.c-tag .box {
+  display: inline-block;
+  padding: 8rpx 15rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  border: 1rpx solid #c8c7cc;
+  color: #666;
+  font-size: 26rpx
+}

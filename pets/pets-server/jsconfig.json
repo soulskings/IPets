@@ -1,0 +1,16 @@
+{
+	"include": [
+		"./*"
+	],
+
+	"exclude": ["node_modules"],
+
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+            "@server/*": ["./*"],
+            "@api/*": ["api/*"],
+            "@utils/*": ["utils/*"]
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<!--pages/user/components/userBody.wxml-->
+<view class="list-box">
+    <view class="list" bindtap="goCollect">
+        <image class="list-icon" src="../img/collection.png"/>
+        <text class="list-name">我的收藏</text>
+    </view>
+    <!-- <view class="list">
+        <icon class="list-icon" type="waiting" size="20" color="" />
+        <text class="list-name">隐私政策</text>
+    </view> -->
+</view>
+<view wx:if="{{!token}}" class="sign-login sign-btn" bindtap="login">点击登录</view>
+<view wx:if="{{token}}" class="sign-out sign-btn" bindtap="quit">
+    退出登录
+</view>

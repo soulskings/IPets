@@ -1,0 +1,52 @@
+/* pages/pet-detail/components/strategy.wxss */
+.strategy {
+  padding: 20rpx 40rpx;
+}
+
+.border {
+  border-top: solid 20rpx #f9f9fa;
+}
+
+.title {
+  padding-bottom: 30rpx;
+}
+
+.title-txt {
+  position: relative;
+  font-size: 35rpx;
+  font-weight: 500;
+  padding-left: 24rpx;
+}
+
+.title-txt::before {
+  content: '';
+  position: absolute;
+  top: 6rpx;
+  left: -4rpx;
+  width: 8rpx;
+  height: 34rpx;
+  background: #ff9d00;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 48.8%;
+  padding: 20rpx 25rpx;
+  border-radius: 10rpx;
+  margin-bottom: 18rpx;
+  word-break: break-all;
+  background: #f9f9fa;
+}
+
+.item-txt {
+  font-size: 30rpx;
+  font-weight: 300;
+}

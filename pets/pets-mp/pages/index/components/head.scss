@@ -1,0 +1,19 @@
+.head{
+    margin-top: 10rpx;
+    padding: 0 40rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.photo{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.search-input{
+    display: inline-block;
+    width: calc(100% - 152rpx);
+    text-align: center;
+    padding: 19rpx 0;
+    border:1rpx solid #c8c7cc;
+    border-radius: 16rpx;
+}

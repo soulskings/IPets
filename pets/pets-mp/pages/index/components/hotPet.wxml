@@ -1,0 +1,15 @@
+<!--pages/index/components/hotPet.wxml-->
+<view class="hot-pet" hover-class="none" hover-stop-propagation="false">
+    <text class='classification-type'>热门宠物攻略</text>
+    <view class="pet-box" wx:for="{{hotData}}" wx:key="index">
+        <text class="label-type" wx:if="{{item.length > 0}}">{{petsType[index]}}：</text>
+        <view class="label-box" wx:if="{{item.length > 0}}">
+            <!-- <text class="label-name" v-for="(sub, ind) in item" :key="ind" @click="goDetail(sub)">
+                {{sub.name}}
+            </text> -->
+            <view class="item-name" wx:for="{{item}}" wx:key="index" data-pid="{{item.pid}}" bindtap="goDetail">
+                <c-tag tag-expand="c-tag" label="{{item.id}}" value="{{item.name}}" setStyle="{{setStyle}}"></c-tag>
+            </view>
+        </view>
+    </view>
+</view>

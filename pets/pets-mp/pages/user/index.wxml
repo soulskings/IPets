@@ -1,0 +1,5 @@
+<!--pages/user/index.wxml-->
+<view>
+    <userHead></userHead>
+    <userBody></userBody>
+</view>

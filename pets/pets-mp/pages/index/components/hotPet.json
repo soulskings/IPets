@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "c-tag": "../../../components/common/c-tag"
+  },
+  "component": true
+}

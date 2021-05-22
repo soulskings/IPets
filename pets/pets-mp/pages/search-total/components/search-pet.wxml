@@ -1,0 +1,18 @@
+<view class="search-pet">
+  <view class="title">
+    <view class="title-txt">宠物</view>
+    <view class="more" bindtap="more">更多 ></view>
+  </view>
+  <scroll-view scroll-x>
+    <view class="pet-warp">
+      <view wx:for="{{petList}}" wx:key="*this" class="pet-item {{index === petList.length - 1 ? 'right-margin': ''}}">
+        <image
+        class="pet-img"
+        src="{{item.img_url}}"/>
+        <view class="pet-name">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

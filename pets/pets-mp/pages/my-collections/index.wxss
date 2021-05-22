@@ -1,0 +1,159 @@
+/* pages/pet-choice/index.wxss */
+
+
+.collention-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.collention-title, .collention-title-text{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 20rpx;
+}
+.collention-title-text{
+    text-align: center;
+    font-size: 36rpx;
+}
+.collention-title-text-active{
+    color: #ff9d00;
+}
+
+.collention-table{
+    width: 100%;
+    height: 100%;
+}
+
+.collention-tab{
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 3rpx solid #eeeeee;
+}
+.collention-tab-item{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.collention-content{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 100rpx;
+}
+
+.collention-content-item{
+    width: 100%;
+    height: 200rpx;
+    border-bottom: 1rpx solid #eeeeee;
+    display: flex;
+    flex-direction: row;
+}
+.collention-content-item-pet{
+    padding-top: 40rpx;
+}
+
+.collention-item-image{
+    width: 120rpx;
+    height: 120rpx;
+    margin: 40rpx;
+}
+
+.collention-item-right{
+    flex: 1;
+    height: 100%;
+    line-height: 30px;
+    padding: 20rpx 30rpx 0;
+}
+
+.collention-item-right-title{
+    width: 100%;
+    color: #444444;
+}
+.collention-item-right-desc{
+    font-size: 24rpx;
+    line-height: 40rpx;
+    max-height: 80rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    color: #666666;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+}
+
+
+.search-item {
+    display: flex;
+    padding: 30rpx 60rpx;
+    border-bottom: 1px solid #f3f5f7;
+  }
+  
+  .item-img {
+    width: 150rpx;
+    height: 150rpx;
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .item-txt {
+    flex: 1;
+    padding-left: 50rpx;
+    font-size: 28rpx;
+  }
+  
+  .txt {
+    color: #333;
+    padding-bottom: 30rpx;
+  }
+  
+  .tag {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag-item {
+    background: #fff;
+    padding: 5rpx 0;
+    margin-bottom: 10rpx;
+    border-radius: 13rpx;
+    /* color: #ff9d00; */
+    color: #666;
+    font-size: 24rpx;
+  }
+  
+  .fx {
+    padding: 0 12rpx;
+  }
+  
+  .price {
+    font-size: 22rpx;
+  }
+  
+  .search-list {
+    position: absolute;
+    top: 89rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .loadmore{
+    color: #666;
+  }
+
+  .no-more {
+    text-align: center;
+    padding: 40rpx 0;
+    color: #666;
+    font-size: 28rpx;
+  }
+  .load-failed{
+      color: #007aff;
+  }

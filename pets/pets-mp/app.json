@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index-bak/index",
+    "pages/index-with-data/index",
+    "pages/logs/logs",
+    "pages/user/index",
+    "pages/pet-detail/index",
+    "pages/pet-choice/index",
+    "pages/article/index",
+    "pages/my-collections/index",
+    "pages/search/search",
+    "pages/search-total/search-total",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#ff9d00",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "攻略",
+        "iconPath": "images/strategy.png",
+        "selectedIconPath": "images/strategy-act.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-act.png"
+      }
+    ]
+  }
+}

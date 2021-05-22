@@ -1,0 +1,12 @@
+<!--pages/index/components/head.wxml-->
+<view class="head">
+    <image class="photo" src="{{avatarUrl==''?errorUrl:avatarUrl}}" binderror="errorFn" mode=""></image>
+    <view class=".search-warp">
+      <image class="search-icon" src="../../search/img/search.png" />
+      <input
+        class="input"
+        placeholder="搜索宠物攻略"
+        bindfocus="search"
+      />
+    </view>
+</view>

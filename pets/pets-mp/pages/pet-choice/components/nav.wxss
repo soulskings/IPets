@@ -1,0 +1,26 @@
+/* pages/pet-choice/components/nav.wxss */
+.nav {
+  position: absolute;
+  left: 0;
+  top: 90rpx;
+  bottom: 0;
+  width: 160rpx;
+  border-right: 1px solid #f3f5f7;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #f8f8f8;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150rpx;
+  font-size: 30rpx;
+}
+
+.nav-act {
+  border-right: 3px solid #ff9d00;
+  color: #ff9d00;
+  background: #fff;
+}

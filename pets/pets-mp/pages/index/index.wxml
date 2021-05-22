@@ -1,0 +1,5 @@
+<view class="home page-padding" hover-class="none" hover-stop-propagation="false">
+    <headSearch></headSearch>
+    <classification></classification>
+    <hotPet></hotPet>
+</view>

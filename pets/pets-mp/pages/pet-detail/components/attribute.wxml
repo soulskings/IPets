@@ -1,0 +1,74 @@
+<!--pages/pet-detail/components/attribute.js.wxml-->
+<view class="attribute">
+  <view class="title">
+    <text class="title-txt">{{detail.name}}概况</text>
+  </view>
+  <view class="describe {{hide ? 'hide' : 'show'}}">
+    <text>简介：{{detail.intro}}</text>
+    <view
+      class="icon-warp {{hide ? 'icon-hide' : 'icon-show'}}" 
+      bindtap="show"
+    >
+      {{hide ? '展开' : '收起'}}
+      <image class="show-icon {{hide ? 'icon-down' : 'icon-up'}}" src="../img/icon.png"/>
+    </view>
+  </view>
+  <view class="attr-list">
+    <view 
+      wx:for="{{detail.characteristic_list.propertyList}}"
+      wx:key="*this"
+      wx:if="{{index < showNumber}}"
+      class="attr-item"
+    >{{item}}</view>
+    <view wx:if="{{showAll}}">
+      <view wx:if="{{detail.characteristics}}" class="attr-item">
+        形态特征
+        <text 
+          class="check"
+          data-title="形态特征"
+          data-content="{{detail.characteristics}}"
+          bindtap="checkMethod"
+        >点击查看</text>
+      </view>
+      <view wx:if="{{detail.personality}}" class="attr-item">
+        性格特点
+        <text 
+          class="check"
+          data-title="性格特点"
+          data-content="{{detail.personality}}"
+          bindtap="checkMethod"
+        >点击查看</text>
+      </view>
+      <view wx:if="{{detail.feed}}" class="attr-item">
+        喂食要点
+        <text 
+          class="check"
+          data-title="喂食要点"
+          data-content="{{detail.feed}}"
+          bindtap="checkMethod"
+        >点击查看</text>
+      </view>
+      <view wx:if="{{detail.environment}}" class="attr-item">
+        生活环境
+        <text 
+          class="check"
+          data-title="生活环境"
+          data-content="{{detail.environment}}"
+          bindtap="checkMethod"
+        >点击查看</text>
+      </view>
+    </view>
+  </view>
+  <view 
+    class="show-style" 
+    bindtap="showAll"
+  >
+    {{ showAll ? '收起' : '全部'}}
+  </view>
+  <layer
+    wx:if="{{showLayer}}"
+    title="{{layerTitle}}"
+    content="{{layerContent}}"
+    bindcloseEvent="closeMethod"
+  ></layer>
+</view>

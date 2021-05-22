@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "banner": "./components/banner",
+    "strategy": "./components/strategy",
+    "attribute": "./components/attribute"
+  }
+}

@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+
+<!-- <button class="weui-btn mini-btn" plain="true" size="mini" bindtap="login">获取手机号</button> -->
+<button bindtap="login">登录</button>
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->

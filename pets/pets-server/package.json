@@ -4,7 +4,10 @@
   "description": "Hello Koa 2 example with async",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "dev": "node app.js dev",
+    "test": "node app.js test",
+    "pro": "node app.js pro",
+    "watch": "supervisor app.js"
   },
   "keywords": [
     "koa",
@@ -26,7 +29,8 @@
     "body-parser": "^1.18.3",
     "circular-json": "^0.5.5",
     "formidable": "^1.2.1",
-    "koa": "2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
     "koa-better-body": "^3.0.4",
     "koa-body": "^4.0.4",
     "koa-bodyparser": "3.2.0",
@@ -34,6 +38,8 @@
     "koa-router": "7.0.0",
     "koa-session": "^5.12.3",
     "koa2-cors": "^2.0.5",
+    "lookup-dns-cache": "^2.1.0",
+    "module-alias": "^2.2.2",
     "mongoose": "^5.7.7",
     "nunjucks": "2.4.2",
     "qs": "^6.6.0"
@@ -41,5 +47,10 @@
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0"
+  },
+  "_moduleAliases": {
+    "@server": ".",
+    "@api": "api",
+    "@utils": "utils"
   }
 }
